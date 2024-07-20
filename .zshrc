@@ -10,16 +10,11 @@ plugins=(
     vscode)
 
 ZSH_AUTOSUGGEST_STRATEGY=(
-    history
     completion
+    history
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# Enable Pure
-# fpath+=($HOME/.zsh/pure)
-# autoload -U promptinit; promptinit
-# prompt pure
 
 # Get environmental variables from ~/.env_vars if it exists (in order to keep separate env variables per computer)
 if [ -f ~/.env_vars ]; then
