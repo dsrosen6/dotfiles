@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 OMZ_DIR="$HOME/.oh-my-zsh"
 CUSTOM_DIR="$HOME/.oh-my-zsh/custom"
 THEME_LINK="https://raw.githubusercontent.com/dsrosen6/hyperzsh-dr/main/hyperzsh-dr.zsh-theme"
@@ -34,6 +34,14 @@ if [[ ! -f "$FONT_PATH" ]]; then
     fi
 else
     echo "JetBrains Mono font already installed"
+fi
+
+# Clone dotfiles repo
+if [[ ! -d "$HOME/dotfiles" ]]; then
+    echo "Cloning dotfiles repo"
+    git clone https://github.com/dsrosen6/dotfiles "$HOME/dotfiles"
+else
+    echo "dotfiles repo already cloned"
 fi
 
 # Remove current .zshrc file
