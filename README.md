@@ -5,7 +5,7 @@
 `bash -c "$(curl -fsSL https://raw.githubusercontent.com/dsrosen6/dotfiles/main/resource/setup.sh)"`
 
 
-If you'd like to use my iTerm settings, go to iTerm's Settings > General > Preferences, check "Load preferences from a custom folder or URL", then pick the .iterm2 folder in this repo.
+If you'd like to use my iTerm settings, go to iTerm's Settings > General > Preferences, check "Load preferences from a custom folder or URL", then pick the .iterm2 folder in this repo. Note there is at least one reference to my home folder in that file, so make sure to make any machine-specific changes before using.
 
 ## What's it look like?
 Like this!
