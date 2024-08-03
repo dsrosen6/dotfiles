@@ -11,4 +11,4 @@ If you'd like to use my iTerm settings, go to iTerm's Settings > General > Prefe
 Like this!
 
 
-![screenshot](screenshot.png)
+![screenshot](resource/screenshot.png)
