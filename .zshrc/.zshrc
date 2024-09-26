@@ -25,6 +25,7 @@ fi
 alias zshconf="code ~/.zshrc" # Opens this file in VS Code. Requires VSCode "code" command
 alias zshsrc="source ~/.zshrc" # Shortcut to source this file.
 alias python="python3"
+alias byebye="python3 ~/byebye-py/byebye.py" # Run byebye.py script to hide all open apps
 
 # Go Env Vars
 export GOROOT=/usr/local/go
