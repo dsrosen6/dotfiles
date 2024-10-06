@@ -1442,7 +1442,7 @@
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>Hotkey</key>
-	<false/>
+	<true/>
 	<key>HotkeyChar</key>
 	<integer>124</integer>
 	<key>HotkeyCode</key>
