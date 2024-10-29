@@ -66,6 +66,9 @@ ssh_symbol = " "
 [java]
 symbol = " "
 
+[jobs]
+disabled = true
+
 [julia]
 symbol = " "
 
