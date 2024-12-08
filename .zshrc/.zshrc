@@ -26,7 +26,6 @@ alias zshconf="code ~/.zshrc" # Opens this file in VS Code. Requires VSCode "cod
 alias zshsrc="source ~/.zshrc" # Shortcut to source this file.
 alias ssconf="code ~/.config/starship.toml"
 alias python="python3"
-alias byebye="python3 ~/byebye-py/byebye.py" # Run byebye.py script to hide all open apps
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store' >> .gitignore" # Create a .gitignore file with common entries
 alias goland="open -a 'GoLand' --args $@" # Open GoLand from terminal
 
