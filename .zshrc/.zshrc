@@ -36,4 +36,8 @@ export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:$GOROOT/bin
 
 # Starship
-eval "$(starship init zsh)"
+eval "$(starship init zsh)" # The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/danny/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
