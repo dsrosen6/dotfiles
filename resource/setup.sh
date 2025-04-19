@@ -34,18 +34,6 @@ else
     echo "Starship already installed"
 fi
 
-# Install Tmux
-if ! command -v tmux >/dev/null 2>&1; then
-    if ! command -v brew >/dev/null 2>&1; then
-        echo "Tmux is not installed, but neither is brew - install homebrew and try again"
-    else
-        echo "Installing Tmux"
-        brew install tmux
-    fi
-else
-    echo "Tmux already installed"
-fi
-
 # Install JetBrains Mono font for iTerm
 if [[ ! -f "$FONT_PATH" ]]; then
     if ! command -v brew >/dev/null 2>&1; then
