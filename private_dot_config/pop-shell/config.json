@@ -1,0 +1,14 @@
+{
+  "float": [
+    {
+      "class": "1Password",
+      "title": "Quick Access — 1Password"
+    },
+    {
+      "class": "1Password",
+      "title": "1Password"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false
+}
