@@ -24,7 +24,6 @@ fi
 # Aliases
 alias zshconf="code ~/.zshrc" # Opens this file in VS Code. Requires VSCode "code" command
 alias zshsrc="source ~/.zshrc" # Shortcut to source this file.
-alias ssconf="code ~/.config/starship.toml"
 alias python="python3"
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
 alias goland="open -a 'GoLand' --args $@" # Open GoLand from terminal
@@ -36,8 +35,6 @@ export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:$GOROOT/bin
 export EDITOR="code --wait"
 
-# Starship
-eval "$(starship init zsh)" # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/danny/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
