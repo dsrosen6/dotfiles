@@ -1,7 +1,7 @@
 # Oh My Zsh Settings
 export ZSH="$HOME/.oh-my-zsh" # Path to OMZ config
 zstyle ':omz:update' mode reminder  # Update behavior - inform when available
-ZSH_THEME=""
+ZSH_THEME="simple"
 
 plugins=(
     git
