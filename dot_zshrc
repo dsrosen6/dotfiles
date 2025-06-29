@@ -22,18 +22,14 @@ if [ -f ~/.env_vars ]; then
 fi
 
 # Aliases
-alias zshconf="code ~/.zshrc" # Opens this file in VS Code. Requires VSCode "code" command
-alias zshsrc="source ~/.zshrc" # Shortcut to source this file.
-alias python="python3"
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
-alias goland="open -a 'GoLand' --args $@" # Open GoLand from terminal
+alias chz="chezmoi" # saving precious characters
 
 # Go Env Vars
 export GOROOT=/usr/local/go
 export GOPATH=/home/danny/go
 export PATH=$GOPATH/bin:$PATH 
 export PATH=$PATH:$GOROOT/bin
-export EDITOR="code --wait"
 
 fpath=(/Users/danny/.docker/completions $fpath)
 autoload -Uz compinit
