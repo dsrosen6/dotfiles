@@ -27,7 +27,7 @@ alias chz="chezmoi" # saving precious characters
 
 # Go Env Vars
 export GOROOT=/usr/local/go
-export GOPATH=/home/danny/go
+export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH 
 export PATH=$PATH:$GOROOT/bin
 
