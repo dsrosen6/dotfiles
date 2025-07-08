@@ -1,5 +1,8 @@
 after-login-command = []
-after-startup-command = []
+after-startup-command = [
+   'exec-and-forget borders style=round active_color=0xff2ecc71 inactive_color=0xff000000 width=6.0'
+]
+
 start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -15,10 +18,10 @@ automatically-unhide-macos-hidden-apps = true
 [gaps]
     inner.horizontal = 8
     inner.vertical =   8
-    outer.left =       7
-    outer.bottom =     7
-    outer.top =        7
-    outer.right =      7
+    outer.left =       8
+    outer.bottom =     8
+    outer.top =        8
+    outer.right =      8
 
 [mode.main.binding]
 
