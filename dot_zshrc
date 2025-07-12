@@ -23,6 +23,7 @@ fi
 
 # Aliases
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
+alias hlconf="vim ~/.config/hypr/hyprland.conf"
 alias chz="chezmoi" # saving precious characters
 alias zj="zellij"
 
