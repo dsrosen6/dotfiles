@@ -31,6 +31,7 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH 
 export PATH=$PATH:$GOROOT/bin
+export PATH=$HOME/bin
 
 fpath=(/Users/danny/.docker/completions $fpath)
 autoload -Uz compinit
