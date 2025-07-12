@@ -3,5 +3,5 @@ README.md
 .aerospace.toml
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
-.config/pop-shell
+.config/hypr/hyprland.conf
 {{ end }}
