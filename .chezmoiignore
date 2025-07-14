@@ -1,8 +1,16 @@
 README.md
 {{ if ne .chezmoi.os "darwin" }}
 .aerospace.toml
-.config/borders
+.config/borders/
+.config/borders/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
-.config/hypr/hyprland.conf
+.config/hypr
+.config/hypr/*
+.config/keyd
+.config/keyd/*
+.config/waybar
+.config/waybar/*
+.config/wofi
+.config/wofi/*
 {{ end }}
