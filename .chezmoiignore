@@ -1,6 +1,7 @@
 README.md
 {{ if ne .chezmoi.os "darwin" }}
-.aerospace.toml
+.config/aerospace/
+.config/aerospace/*
 .config/borders/
 .config/borders/*
 {{ end }}
