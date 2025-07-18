@@ -24,7 +24,7 @@ automatically-unhide-macos-hidden-apps = true
 [mode.main.binding]
 
     alt-cmd-ctrl-q = 'close --quit-if-last-window'
-    alt-cmd-ctrl-enter = 'exec-and-forget open -n "/Applications/Ghostty.app"'
+    alt-cmd-ctrl-enter = 'exec-and-forget open -n "/Applications/kitty.app"'
     alt-cmd-ctrl-f = 'exec-and-forget open "/System/Library/CoreServices/Finder.app"'
     alt-cmd-ctrl-b = 'exec-and-forget open -n "/Applications/Google Chrome.app"'
     alt-cmd-ctrl-m = 'exec-and-forget open "/System/Applications/Messages.app"'
