@@ -12,6 +12,8 @@ README.md
 .config/keyd/*
 .config/waybar
 .config/waybar/*
-.config/wofi
-.config/wofi/*
+.config/rofi
+.config/rofi/*
+.config/uwsm
+.config/uwsm/*
 {{ end }}
