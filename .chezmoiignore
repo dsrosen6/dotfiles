@@ -6,6 +6,8 @@ README.md
 .config/borders/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+.config/arch_packages
+.config/arch_packages/*
 .config/hypr
 .config/hypr/*
 .config/keyd
