@@ -27,6 +27,9 @@ alias hlconf="vim ~/.config/hypr/hyprland.conf"
 alias chz="chezmoi" # saving precious characters
 alias zj="zellij"
 
+# Arch Commands
+alias pkglists="mkdir -p ~/.config/arch_packages && pacman -Qqe | grep -Ff <(pacman -Qqm) -v > ~/.config/arch_packages/official_packages.txt && pacman -Qm > ~/.config/arch_packages/aur_packages.txt"
+
 # Go Env Vars
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
