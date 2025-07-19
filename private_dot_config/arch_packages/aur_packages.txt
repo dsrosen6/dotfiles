@@ -1,0 +1,4 @@
+1password 8.11.0-29
+brave-bin 1:1.80.122-1
+yay 12.5.0-1
+yay-debug 12.5.0-1
