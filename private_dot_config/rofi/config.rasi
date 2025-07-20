@@ -179,3 +179,7 @@ configuration {
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
+
+//@theme "/home/danny/.local/share/rofi/themes/rounded-gray-dark.rasi"
+
+@theme "/usr/share/rofi/themes/fancy.rasi"

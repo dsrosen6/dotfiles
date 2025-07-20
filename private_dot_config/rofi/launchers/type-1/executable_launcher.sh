@@ -12,9 +12,14 @@
 ## style-11    style-12    style-13    style-14    style-15
 
 dir="$HOME/.config/rofi/launchers/type-1"
-theme='style-3'
+theme='style-5'
 
-## Run
-rofi \
-    -show drun \
-    -theme ${dir}/${theme}.rasi
+if pgrep -x rofi; then
+	killall rofi
+else
+	if [[ $1 == "clipboard" ]]; then
+		cliphist list | rofi -theme ${dir}/${theme}.rasi -dmenu | cliphist decode | wl-copy
+	else
+		rofi -show drun -theme ${dir}/${theme}.rasi
+	fi
+fi
