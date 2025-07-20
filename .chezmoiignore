@@ -10,10 +10,10 @@ README.md
 .config/arch_packages/*
 .config/hypr
 .config/hypr/*
+.config/hyprpanel
+.config/hyprpanel/*
 .config/keyd
 .config/keyd/*
-.config/waybar
-.config/waybar/*
 .config/rofi
 .config/rofi/*
 .config/uwsm
