@@ -23,12 +23,12 @@ fi
 
 # Aliases
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
-alias hlconf="vim ~/.config/hypr/hyprland.conf"
 alias chz="chezmoi" # saving precious characters
 alias zj="zellij"
 
-# Arch Commands
-alias pkglists="mkdir -p ~/.config/arch_packages && pacman -Qqe | grep -Ff <(pacman -Qqm) -v > ~/.config/arch_packages/official_packages.txt && pacman -Qm > ~/.config/arch_packages/aur_packages.txt"
+# Hyprland Commands
+alias hlconf="vim ~/.config/hypr/hyprland.conf"
+alias hllogout="hyprctl dispatch exit"
 
 # Go Env Vars
 export GOROOT=/usr/local/go

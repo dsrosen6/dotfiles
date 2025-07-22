@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Fira Sans Semibold";
     font-size: 15px;
     transition: background-color .3s ease-out;
 }
@@ -9,10 +9,15 @@ window#waybar {
     background: rgba(36, 39, 58, 0.7); 
 	border-radius: 15px;
     color: #c0caf5;
-    font-family: 
-        SpaceMono Nerd Font,
-        feather;
     transition: background-color .5s;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+.modules-left {
+    margin-left: 8px;
 }
 
 #clock,
@@ -34,36 +39,43 @@ window#waybar {
 #language,
 #custom-arch,
 #workspaces,
+#workspaces,
+#window,
 #mpd {
-	padding: 3 10px;
+	padding: 1 10px;
+    margin: 6 2px;
+    border-radius: 10px;
+    background: rgba(19, 19, 29, 0.5);
+}
+
+#workspaces {
+    background: transparent;
 }
 
 #workspaces button {
-  background:transparent;
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
-  font-weight: 900;
-  font-size: 13pt;
-  color: #c0caf5;
-  border:none;
-  border-radius: 15px;
+    background: transparent;
+    color: #c0caf5;
+    box-shadow: none;
+    text-shadow: none;
 }
 
-#workspaces button:hover,
-#workspaces button:focus {
-  outline: none;
-  box-shadow:none;
+#workspaces button:hover {
+    border-color:#7dc4e4;
+    border-width: 1px;
+    color: #7dc4e4;
 }
+
 #workspaces button.active {
-    background: #13131d; 
+    background:rgba(19, 19, 29, 0.5); 
 }
 
 #custom-arch {
+    background: none;
     font-size: 25px;
     transition: color .5s;
 }
 
 #custom-arch:hover {
-    color: #1793d1;
+    color: #7dc4e4;
 }
+
