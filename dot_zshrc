@@ -27,7 +27,7 @@ alias chz="chezmoi" # saving precious characters
 alias zj="zellij"
 
 # Hyprland Commands
-alias hlconf="vim ~/.config/hypr/hyprland.conf"
+alias hlconf="nvim ~/.config/hypr/hyprland.conf"
 alias hllogout="hyprctl dispatch exit"
 
 # Go Env Vars
