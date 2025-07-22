@@ -1,9 +1,10 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top",
-    "position": "top",
-    "height": 42,
-	"margin": "5px, 8",
+  "layer": "top",
+  "position": "top",
+	"margin-top": 5,
+	"margin-left": 8,
+	"margin-right": 8,
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces"
