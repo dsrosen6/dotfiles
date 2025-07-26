@@ -6,16 +6,6 @@ README.md
 .config/borders/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
-.config/arch_packages
-.config/arch_packages/*
-.config/hypr
-.config/hypr/*
-.config/waybar
-.config/waybar/*
 .config/keyd
 .config/keyd/*
-.config/rofi
-.config/rofi/*
-.config/uwsm
-.config/uwsm/*
 {{ end }}
