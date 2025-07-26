@@ -8,4 +8,6 @@ README.md
 {{ if ne .chezmoi.os "linux" }}
 .config/keyd
 .config/keyd/*
+.config/pop-shell
+.config/pop-shell/*
 {{ end }}
