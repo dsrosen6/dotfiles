@@ -10,4 +10,6 @@ README.md
 .config/keyd/*
 .config/pop-shell
 .config/pop-shell/*
+.config/fedora-setup
+.config/fedora-setup/*
 {{ end }}
