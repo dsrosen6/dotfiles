@@ -4,6 +4,8 @@ README.md
 .config/aerospace/*
 .config/borders/
 .config/borders/*
+.config/karabiner/
+.config/karabiner/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
 .config/keyd
