@@ -25,7 +25,7 @@ automatically-unhide-macos-hidden-apps = true
 
     alt-cmd-ctrl-q = 'close --quit-if-last-window'
     alt-cmd-ctrl-enter = 'exec-and-forget open -n "/Applications/kitty.app"'
-    alt-cmd-ctrl-f = 'exec-and-forget open "/System/Library/CoreServices/Finder.app"'
+    alt-cmd-ctrl-f = 'exec-and-forget open "$HOME"'
     alt-cmd-ctrl-b = 'exec-and-forget open -n "$(~/.config/aerospace/default-browser.sh)"'
     alt-cmd-ctrl-m = 'exec-and-forget open "/System/Applications/Messages.app"'
     alt-cmd-ctrl-v = 'exec-and-forget open -n "/Applications/Visual Studio Code.app"'
