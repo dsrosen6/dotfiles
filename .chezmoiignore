@@ -8,10 +8,10 @@ README.md
 .config/karabiner/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
-.config/keyd
+.config/keyd/
 .config/keyd/*
-.config/pop-shell
-.config/pop-shell/*
-.config/fedora-setup
+.config/fedora-setup/
 .config/fedora-setup/*
+.config/sway/
+.config/sway/*
 {{ end }}
