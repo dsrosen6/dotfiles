@@ -1,0 +1,81 @@
+* {
+    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+    font-family: "Fira Sans Semibold";
+    font-size: 15px;
+    transition: background-color .3s ease-out;
+}
+
+window#waybar {
+    background: rgba(36, 39, 58, 0.7); 
+	border-radius: 15px;
+    color: #c0caf5;
+    transition: background-color .5s;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+.modules-left {
+    margin-left: 8px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#custom-distro-icon,
+#workspaces,
+#window,
+#mpd {
+	padding: 1 10px;
+    margin: 6 2px;
+    border-radius: 10px;
+    background: rgba(19, 19, 29, 0.5);
+}
+
+#workspaces {
+    background: transparent;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #c0caf5;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button:hover {
+    border-color:#7dc4e4;
+    border-width: 1px;
+    color: #7dc4e4;
+}
+
+#workspaces button.active {
+    background:rgba(19, 19, 29, 0.5); 
+}
+
+#custom-distro-icon {
+    background: none;
+    padding-right: 0px;
+    font-size: 25px;
+    transition: color .5s;
+}
+
+#custom-distro-icon:hover {
+    color: #7dc4e4;
+}
+
