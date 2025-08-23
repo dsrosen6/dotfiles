@@ -13,12 +13,15 @@ set $up k
 set $right l
 
 set $term kitty
-set $menu ~/.config/sway/scripts/ulauncher.sh 
+set $scripts ~/.config/sway/scripts
+set $menu $scripts/ulauncher.sh
+set $locker $scripts/locker.sh
 set $browser firefox
 set $files nautilus
+set $wallpaper ~/.config/sway/default_wallpaper.jpg
 
 ### Output
-output * bg ~/.config/sway/default_wallpaper.jpg fill
+output * bg $wallpaper fill
 output DP-2 resolution 3440x1440@174.962Hz
 # get names outputs: swaymsg -t get_outputs
 
@@ -26,14 +29,10 @@ output DP-2 resolution 3440x1440@174.962Hz
 ### Startup Commands ###
 ########################
 ### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+exec swayidle -w \
+         timeout 600 '$locker' \
+         timeout 630 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep '$locker'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -67,6 +66,9 @@ input type:pointer {
 
     # Open files
     bindsym $mod+f exec $files
+
+    # Lock the screen
+    bindsym Ctrl+Shift+l exec $locker
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -207,23 +209,14 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%m-%d %H:%M'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar
 }
 
 # window gaps
 gaps inner 5
 gaps outer 5
 
+default_border pixel 3
 for_window [app_id="ulauncher"] border none
 
 include /etc/sway/config.d/*
