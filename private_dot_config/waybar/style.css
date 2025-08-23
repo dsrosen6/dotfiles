@@ -48,14 +48,13 @@ window#waybar {
 }
 
 #workspaces {
-    background: transparent;
+    background: rgba(19, 19, 29, 0.5);
+    padding: 0 0px;
 }
 
 #workspaces button {
     background: transparent;
     color: #c0caf5;
-    box-shadow: none;
-    text-shadow: none;
 }
 
 #workspaces button:hover {
@@ -65,12 +64,11 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background:rgba(19, 19, 29, 0.5); 
+    background:rgba(19, 19, 29, 1.0); 
 }
 
 #custom-distro-icon {
     background: none;
-    padding-right: 0px;
     font-size: 25px;
     transition: color .5s;
 }
