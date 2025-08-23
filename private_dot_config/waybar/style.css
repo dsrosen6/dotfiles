@@ -12,6 +12,10 @@ window#waybar {
     transition: background-color .5s;
 }
 
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
 .modules-right {
     margin-right: 8px;
 }
