@@ -14,4 +14,8 @@ README.md
 .config/fedora-setup/*
 .config/sway/
 .config/sway/*
+.config/hypr/
+.config/hypr/*
+.config/waybar/
+.config/waybar/*
 {{ end }}
