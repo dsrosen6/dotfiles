@@ -26,6 +26,7 @@ alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignor
 alias chz="chezmoi" # saving precious characters
 alias zj="zellij"
 alias fupdate="sudo dnf upgrade --refresh && flatpak update && sudo snap refresh"
+alias panelsettings="hyprpanel toggleWindow settings-dialog"
 
 # Go Env Vars
 export GOROOT=/usr/local/go
