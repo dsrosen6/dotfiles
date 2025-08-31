@@ -11,20 +11,18 @@
         }
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "󰝟",
-        "format-source-muted": "",
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
         "format-icons": {
             "default": [
                 "",
-                "",
-                ""
+                ""
             ]
         },
         "on-click": "pavucontrol"
     },
     "clock": {
-        "format": "{:%I:%M} ",
+        "format": "{:%I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     }

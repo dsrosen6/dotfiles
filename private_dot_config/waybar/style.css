@@ -1,83 +1,46 @@
 * {
-    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-    font-family: "Fira Sans Semibold";
-    font-size: 15px;
-    transition: background-color .3s ease-out;
+    font-family: "JetBrains Mono Semibold";
+    font-size: 14px;
+    border-radius: 7;
+}
+
+.modules-right {
+    margin-right: 4px;
+}
+
+.modules-left {
+    margin-left: 4px;
 }
 
 window#waybar {
-    background: rgba(36, 39, 58, 0.7); 
-	border-radius: 15px;
-    color: #c0caf5;
-    transition: background-color .5s;
+    background: rgba(19, 19, 29, 0.4); 
 }
 
 window#waybar.empty #window {
     background-color: transparent;
 }
 
-.modules-right {
-    margin-right: 8px;
-}
-
-.modules-left {
-    margin-left: 8px;
-}
-
 #clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
 #pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#language,
-#custom-distro-icon,
 #workspaces,
-#window,
-#mpd {
-	padding: 1 10px;
-    margin: 6 2px;
-    border-radius: 10px;
-    background: rgba(19, 19, 29, 0.5);
+#window {
+	padding: 0 7px;
+    margin: 4 2px;
+    background: rgba(19, 19, 29, 0.3);
 }
 
 #workspaces {
-    background: rgba(19, 19, 29, 0.5);
     padding: 0 0px;
 }
 
 #workspaces button {
+    padding: 1 5px;
     background: transparent;
     color: #c0caf5;
 }
 
-#workspaces button:hover {
-    border-color:#7dc4e4;
-    border-width: 1px;
-    color: #7dc4e4;
-}
-
 #workspaces button.active {
-    background:rgba(19, 19, 29, 1.0); 
-}
-
-#custom-distro-icon {
-    background: none;
-    font-size: 25px;
-    transition: color .5s;
-}
-
-#custom-distro-icon:hover {
+    background:rgba(19, 19, 29, 0.1); 
     color: #7dc4e4;
 }
 
