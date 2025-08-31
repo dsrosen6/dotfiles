@@ -1,9 +1,4 @@
 {
-    "custom/distro-icon": {
-        "format": "",
-        "tooltip": true,
-        "tooltip-format": "mlady"
-    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -13,13 +8,6 @@
             "urgent": "",
             "active": "",
             "default": ""
-        }
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
         }
     },
     "pulseaudio": {
@@ -35,16 +23,8 @@
         },
         "on-click": "pavucontrol"
     },
-    "cpu": {
-        "format": "  {usage}%",
-        "tooltip": true
-    },
-    "memory": {
-        "format": "  {}%",
-        "tooltip": true
-    },
     "clock": {
-        "format": "{:%e %B | %I:%M} ",
+        "format": "{:%I:%M} ",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     }
