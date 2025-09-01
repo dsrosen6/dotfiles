@@ -1,6 +1,7 @@
 {
     "hyprland/workspaces": {
         "disable-scroll": true,
+        "show-special": true,
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
@@ -9,6 +10,9 @@
             "active": "",
             "default": ""
         }
+    },
+    "hyprland/window": {
+        "format": "{initialTitle}"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -25,5 +29,11 @@
         "format": "{:%I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+        "format": "{}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause"
     }
 }

@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Nord
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -2794,7 +2794,7 @@ macos_option_as_alt yes
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMono Nerd Font Mono"
+font_family      family="JetBrains Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
