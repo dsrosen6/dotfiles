@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-    background: rgba(19, 19, 29, 0.4); 
+    background: rgba(0,0,0, 0.4); 
 }
 
 window#waybar.empty #window {
@@ -28,6 +28,7 @@ window#waybar.empty #window {
 	padding: 4 10px;
     margin: 6 2px;
     background: rgba(19, 19, 29, 0.3);
+    color: rgba(255,255,255,0.9);
 }
 
 #workspaces {
@@ -37,11 +38,11 @@ window#waybar.empty #window {
 #workspaces button {
     padding: 1 5px;
     background: transparent;
-    color: #c0caf5;
+    color: rgba(255,255,255,0.6);
 }
 
 #workspaces button.active {
     background:rgba(19, 19, 29, 0.1); 
-    color: #7dc4e4;
+    color: rgba(125,196,228,1.0);
 }
 
