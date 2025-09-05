@@ -124,9 +124,29 @@ bindsym Print exec grim
 gaps inner 8
 gaps outer 4
 
-default_border pixel 2
-set $mainBorder #7dc4e4
-set $indicator #8bd5ca
-client.focused $mainBorder $mainBorder $mainBorder $indicator
+font Adwaita 10
 
+default_border pixel 2
+set $colorTeal #8bd5ca
+set $colorSky #91d7e3
+set $colorSapphire #7dc4e4
+set $colorBlue #8aadf4
+set $colorText #cad3f5
+set $colorSubtext0 #a5adcb
+set $colorSubtext1 #b8c0e0
+set $colorOverlay0 #6e738d
+set $colorOverlay1 #8087a2
+set $colorOverlay2 #939ab7
+set $colorSurface0 #363a4f
+set $colorSurface1 #494d64
+set $colorSurface2 #5b6078
+set $colorBase #24273a
+set $colorMantle #1e2030
+set $colorCrust #181926
+
+# in order: border, background, text, indicator, child-border
+client.focused $colorMantle $colorBlue $colorBase $colorTeal $colorBlue
+client.focused_tab_title $colorBlue $colorBlue $colorBase $colorTeal $colorMantle
+client.focused_inactive $colorMantle $colorSurface1 $colorSubtext0 $colorMantle $colorMantle
+client.unfocused $colorMantle $colorSurface0 $colorSubtext0 $colorMantle $colorMantle 
 include /etc/sway/config.d/*
