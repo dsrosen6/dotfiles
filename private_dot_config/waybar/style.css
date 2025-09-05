@@ -5,15 +5,16 @@
 }
 
 .modules-right {
-    margin-right: 4px;
+    margin-right: 6px;
 }
 
 .modules-left {
-    margin-left: 4px;
+    margin-left: 6px;
 }
 
 window#waybar {
-    background: rgba(0,0,0, 0.4); 
+    background: rgba(24,25,38, 1.0); 
+    border-radius: 0;
 }
 
 window#waybar.empty #window {
@@ -27,8 +28,8 @@ window#waybar.empty #window {
 #window {
 	padding: 4 10px;
     margin: 6 2px;
-    background: rgba(19, 19, 29, 0.3);
-    color: rgba(255,255,255,0.9);
+    background: rgba(54, 58, 79, 1.0);
+    color: rgba(125,196,228,1.0);
 }
 
 #workspaces {
@@ -38,11 +39,11 @@ window#waybar.empty #window {
 #workspaces button {
     padding: 1 5px;
     background: transparent;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.4);
 }
 
-#workspaces button.active {
-    background:rgba(19, 19, 29, 0.1); 
+#workspaces button.focused {
+    background: rgba(54, 58, 79, 1.0);
     color: rgba(125,196,228,1.0);
 }
 

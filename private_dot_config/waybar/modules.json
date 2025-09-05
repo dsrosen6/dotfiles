@@ -1,18 +1,21 @@
 {
-    "hyprland/workspaces": {
+    "sway/workspaces": {
         "disable-scroll": true,
         "show-special": true,
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        },
         "format-icons": {
             "urgent": "",
             "active": "",
             "default": ""
         }
-    },
-    "hyprland/window": {
-        "format": "{initialTitle}"
     },
     "pulseaudio": {
         "format": "{icon} {volume}%",
@@ -26,7 +29,7 @@
         "on-click": "pavucontrol"
     },
     "clock": {
-        "format": "{:%I:%M}",
+        "format": "{:%d | %I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },

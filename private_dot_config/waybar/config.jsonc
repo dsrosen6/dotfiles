@@ -2,18 +2,14 @@
 {
     "layer": "top",
     "position": "top",
-    "margin-top": 5,
-    "margin-left": 8,
-    "margin-right": 8,
     "modules-left": [
-        "hyprland/workspaces"
+        "sway/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
-        "pulseaudio",
-        "clock"
+        "pulseaudio"
     ],
     "include": [
         "~/.config/waybar/modules.json"
