@@ -9,7 +9,8 @@
         "clock"
     ],
     "modules-right": [
-        "pulseaudio"
+        "pulseaudio",
+        "battery"
     ],
     "include": [
         "~/.config/waybar/modules.json"
