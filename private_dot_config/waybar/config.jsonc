@@ -12,7 +12,10 @@
         "clock"
     ],
     "modules-right": [
+        "cpu",
+        "memory",
         "pulseaudio",
+        "network",
         "battery"
     ],
     "include": [

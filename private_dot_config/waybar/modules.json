@@ -20,6 +20,21 @@
     "hyprland/window": {
         "format": "{initialTitle}"
     },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": " {}%",
+        "tooltip": true
+    },
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-disconnected": "",
+        "on-click": "sh ~/scripts/rofi-wifi-menu/rofi-wifi-menu.sh"
+    },
     "battery": {
         "states": {
             "warning": 30,
