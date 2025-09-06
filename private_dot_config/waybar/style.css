@@ -1,20 +1,19 @@
 * {
     font-family: "JetBrains Mono Semibold";
-    font-size: 18px;
+    font-size: 17px;
     border-radius: 7;
 }
 
 .modules-right {
-    margin-right: 6px;
+    margin-right: 4px;
 }
 
 .modules-left {
-    margin-left: 6px;
+    margin-left: 4px;
 }
 
 window#waybar {
-    background: rgba(24,25,38, 1.0); 
-    border-radius: 0;
+    background: rgba(0,0,0, 0.4); 
 }
 
 window#waybar.empty #window {
@@ -22,15 +21,15 @@ window#waybar.empty #window {
 }
 
 #clock,
-#battery,
 #pulseaudio,
+#battery,
 #workspaces,
 #custom-spotify,
 #window {
 	padding: 4 10px;
     margin: 6 2px;
-    background: rgba(36, 39, 58, 1.0);
-    color: rgba(138,173,244,1.0);
+    background: rgba(19, 19, 29, 0.3);
+    color: rgba(255,255,255,0.8);
 }
 
 #workspaces {
@@ -40,11 +39,11 @@ window#waybar.empty #window {
 #workspaces button {
     padding: 1 5px;
     background: transparent;
-    color: rgba(138,173,244,0.5);
+    color: rgba(255,255,255,0.5);
 }
 
-#workspaces button.focused {
-    background: rgba(54, 58, 79, 1.0);
-    color: rgba(138,173,244,1.0);
+#workspaces button.active {
+    background:rgba(19, 19, 29, 0.3); 
+    color: rgba(255,255,255,0.8);
 }
 

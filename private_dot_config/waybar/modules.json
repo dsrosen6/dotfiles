@@ -1,5 +1,5 @@
 {
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "show-special": true,
         "all-outputs": true,
@@ -16,6 +16,9 @@
             "active": "",
             "default": ""
         }
+    },
+    "hyprland/window": {
+        "format": "{initialTitle}"
     },
     "battery": {
         "states": {

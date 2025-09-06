@@ -2,8 +2,11 @@
 {
     "layer": "top",
     "position": "top",
+    "margin-top": 5,
+    "margin-left": 8,
+    "margin-right": 8,
     "modules-left": [
-        "sway/workspaces"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
