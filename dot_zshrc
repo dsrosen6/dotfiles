@@ -25,7 +25,7 @@ fi
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
 alias chz="chezmoi" # saving precious characters
 alias zj="zellij"
-alias fupdate="sudo dnf upgrade --refresh && flatpak update && sudo snap refresh"
+alias fupdate="sudo dnf upgrade --refresh && flatpak update"
 alias panelsettings="hyprpanel toggleWindow settings-dialog"
 
 # Go Env Vars
