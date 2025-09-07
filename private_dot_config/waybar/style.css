@@ -56,7 +56,7 @@ window#waybar.empty #window {
 #workspaces,
 #custom-spotify,
 #window {
-	padding: 4 11px;
+	padding: 4 10px;
     margin: 6 2px;
     background: rgba(19, 19, 29, 0.3);
     color: rgba(202, 211, 245, 1.0);

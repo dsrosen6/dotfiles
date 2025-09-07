@@ -12,11 +12,9 @@
         "clock"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
         "pulseaudio",
-        "network",
-        "battery"
+        "battery",
+        "network"
     ],
     "include": [
         "~/.config/waybar/modules.json"
