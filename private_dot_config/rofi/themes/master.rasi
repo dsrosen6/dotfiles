@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "macchiato.rasi"
+@import                          "themes/colors_macchiato.rasi"
 
 * {
     font: "Adwaita Mono 12";

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-theme_path="$HOME/.config/rofi/theme.rasi"
+theme_path="$HOME/.config/rofi/themes/powermenu.rasi"
 
 lock_cmd="$HOME/.config/scripts/hyprlock-sleep-timer/lock.sh"
 logout_cmd="hyprctl dispatch exit"
