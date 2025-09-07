@@ -12,6 +12,8 @@
         "clock"
     ],
     "modules-right": [
+        "cpu",
+        "memory",
         "pulseaudio",
         "battery",
         "network"

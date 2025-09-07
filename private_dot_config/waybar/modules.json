@@ -5,12 +5,6 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}",
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": []
-        },
         "format-icons": {
             "urgent": "",
             "active": "",
@@ -21,29 +15,29 @@
         "format": "{initialTitle}"
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "  {usage}%",
         "tooltip": true
     },
     "memory": {
-        "format": " {}%",
+        "format": "  {}%",
         "tooltip": true
     },
     "network": {
-        "format-wifi": " ",
-        "format-ethernet": "",
+        "format-wifi": "󰖩",
+        "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr}",
-        "format-disconnected": "",
-        "on-click": "sh ~/.config/rofi/menus/wifi-menu.sh"
+        "format-disconnected": "󰖪",
+        "on-click": "sh ~/.config/rofi/menus/wifi-menu"
     },
     "battery": {
         "states": {
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon} {capacity}%",
-        "format-full": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "  {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": [
             "󰂎",
@@ -54,11 +48,10 @@
         ]
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰖁",
+        "format": "{icon}  {volume}%",
+        "format-muted": "",
         "format-icons": {
             "default": [
-                "",
                 ""
             ]
         },
