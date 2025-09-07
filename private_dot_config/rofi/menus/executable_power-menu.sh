@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+theme_path="$HOME/.config/rofi/theme.rasi"
+
+lock_cmd="$HOME/.config/scripts/hyprlock-sleep-timer/lock.sh"
+logout_cmd="hyprctl dispatch exit"
+restart_cmd="reboot"
+shutdown_cmd="shutdown now"
+
+if ! pgrep rofi; then
+    option=$(printf "Lock\nLog Out\nRestart\nShut Down" | rofi -dmenu -i -theme $theme_path -p "Power Menu")
+
+    case "$option" in
+    "Lock") $lock_cmd ;;
+    "Log Out") $logout_cmd ;;
+    "Restart") reboot ;;
+    "Shut Down") shutdown now ;;
+    *) exit 1 ;;
+    esac
+else
+    pkill rofi
+fi
