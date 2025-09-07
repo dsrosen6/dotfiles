@@ -1,0 +1,13 @@
+profile dockedback {
+    output eDP-1 disable
+    output DP-5 enable
+}
+
+profile dockedfront {
+    output eDP-1 disable
+    output DP-3 enable
+}
+
+profile laptop {
+    output eDP-1 enable
+}
