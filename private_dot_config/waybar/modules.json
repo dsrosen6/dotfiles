@@ -67,5 +67,9 @@
         "format": "{}",
         "return-type": "json",
         "on-click": "playerctl play-pause"
+    },
+    "custom/powermenu": {
+        "format": "⏻",
+        "on-click": "sh ~/.config/rofi/menus/power-menu"
     }
 }

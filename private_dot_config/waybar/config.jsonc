@@ -16,7 +16,8 @@
         "memory",
         "pulseaudio",
         "battery",
-        "network"
+        "network",
+        "custom/powermenu"
     ],
     "include": [
         "~/.config/waybar/modules.json"
