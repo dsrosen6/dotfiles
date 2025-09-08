@@ -6,7 +6,8 @@
     "margin-left": 8,
     "margin-right": 8,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/spotify"
     ],
     "modules-center": [
         "clock"

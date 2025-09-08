@@ -20,4 +20,5 @@ README.md
 .config/waybar/*
 .config/rofi/
 .config/rofi/*
+.config/scripts/mediaplayer.py
 {{ end }}
