@@ -1,5 +1,5 @@
-@import                          "themes/master.rasi"
+@import "themes/master.rasi"
 
 listview {
-    lines:                       4;
+    lines: 5;
 }
