@@ -6,7 +6,27 @@
         "warp-on-scroll": false,
         "format": "{name}",
         "persistent-workspaces": {
-            "*": 4
+            "eDP-1": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "DP-3": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "DP-5": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
         }
     },
     "hyprland/window": {
