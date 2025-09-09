@@ -1,33 +1,6 @@
-/****************************************** 
-* Color Reference
-* Taken from Catppuccin Macchiato pallette
-* at https://catppuccin.com/palette/ 
-* Sections covered lightest to darkest
-*
-* Monochromes ****************************
-* text rgb(202, 211, 245) (almost white)
-* subtext 1 rgb(184, 192, 224)
-* subtext 0 rgb(165, 173, 203)
-* overlay 2 rgb(165, 173, 203)
-* overlay 1 rgb(128, 135, 162)
-* overlay 0 rgb(110, 115, 141)
-* surface 2 rgb(91, 96, 120)
-* surface 1 rgb(73, 77, 100)
-* surface 0 rgb(54, 58, 79)
-* base rgb(36, 39, 58)
-* mantle rgb(30, 32, 48)
-* crust rgb(24, 25, 38) (almost black)
-*
-* Blues **********************************
-* teal rgb(139, 213, 202)
-* sky rgb(145, 215, 227)
-* sapphire rgb(125, 196, 228) 
-* blue rgb(138, 173, 244)
-*
-* Reds ***********************************
-* peach rgb(245, 169, 127)
-*******************************************/
-
+@import "macchiato.css";
+@define-color main-color @peach;
+@define-color bg-color @surface0;
 * {
     font-family: "Symbols Nerd Font","JetBrains Mono Semibold" ;
     font-size: 18px;
@@ -59,26 +32,35 @@ window#waybar.empty #window {
 #workspaces,
 #custom-spotify,
 #window {
-	padding: 2 12px;
+	padding: 4 12px;
     margin: 0 3px;
-    background: rgba(54, 58, 79, 1.0);
-    color: rgba(245, 169, 127,1.0);
+    background: @bg-color;
+    color: @main-color;
     border-style: solid;
-    border-color: rgba(245, 169, 127,1.0);
+    border-color: @main-color;
     border-width: 2px;
 }
+
+/*
+#cpu,
+#pulseaudio,
+#network {
+    color: @sapphire;
+}
+*/
 
 #workspaces {
     padding: 0 0px;
 }
 
 #workspaces button {
-    color: rgba(245, 169, 127, 1.0);
+    padding: 2 4px;
+    color: @main-color;
 }
 
 #workspaces button.active {
-    color: rgba(54, 58, 79,1.0);
-    background: rgba(245, 169, 127,1.0);
-    border-radius: 6;
+    color: @bg-color;
+    background: @main-color;
+    border-radius: 0;
 }
 
