@@ -2,9 +2,9 @@
 {
     "layer": "top",
     "position": "top",
-    "margin-top": 5,
-    "margin-left": 8,
-    "margin-right": 8,
+    "margin-top": 8,
+    "margin-left": 2,
+    "margin-right": 2,
     "modules-left": [
         "hyprland/workspaces",
         "custom/spotify"
@@ -17,8 +17,7 @@
         "memory",
         "pulseaudio",
         "battery",
-        "network",
-        "custom/powermenu"
+        "network"
     ],
     "include": [
         "~/.config/waybar/modules.json"
