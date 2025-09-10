@@ -1,10 +1,12 @@
 @import "macchiato.css";
-@define-color main-color @peach;
 @define-color bg-color @surface0;
+@define-color left-color @sapphire;
+@define-color middle-color @sapphire;
+@define-color right-color @sapphire;
 * {
     font-family: "Symbols Nerd Font","JetBrains Mono Semibold" ;
     font-size: 18px;
-    border-radius: 8;
+    border-radius: 6;
 }
 
 .modules-right {
@@ -35,32 +37,44 @@ window#waybar.empty #window {
 	padding: 4 12px;
     margin: 0 3px;
     background: @bg-color;
-    color: @main-color;
+    color: @right-color;
     border-style: solid;
-    border-color: @main-color;
+    border-color: @right-color;
     border-width: 2px;
 }
 
-/*
-#cpu,
-#pulseaudio,
-#network {
-    color: @sapphire;
-}
-*/
-
 #workspaces {
     padding: 0 0px;
+    border-color: @left-color;
 }
 
 #workspaces button {
     padding: 2 4px;
-    color: @main-color;
+    color: @left-color;
 }
 
 #workspaces button.active {
     color: @bg-color;
-    background: @main-color;
+    background: @left-color;
     border-radius: 0;
+}
+
+#custom-spotify {
+    color: @left-color;
+    border-color: @left-color;
+}
+
+#clock {
+    color: @middle-color;
+    border-color: @middle-color;
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery {
+    color: @right-color;
+    border-color: @right-color;
 }
 
