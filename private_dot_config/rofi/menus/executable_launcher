@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
 theme="$HOME/.config/rofi/themes/master.rasi"
+cmd="rofi -show drun -theme $theme"
+if [[ $XDG_CURRENT_DESKTOP == "GNOME" ]]; then
+    cmd="rofi -show drun -theme $theme -normal-window"
+fi
 
 if ! pgrep "rofi"; then
-    rofi -show drun -theme $theme
+    $cmd
 else
     killall rofi
 fi
