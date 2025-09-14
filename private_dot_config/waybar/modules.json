@@ -30,11 +30,11 @@
         "format": "{initialTitle}"
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "tooltip": true
     },
     "memory": {
-        "format": "  {}%",
+        "format": " {}%",
         "tooltip": true
     },
     "network": {
@@ -49,10 +49,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
-        "format-full": "{icon}  {capacity}%",
-        "format-charging": "󰂄  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": [
             "󰂎",
@@ -63,7 +63,7 @@
         ]
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
+        "format": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
             "default": [
@@ -73,7 +73,7 @@
         "on-click": "pavucontrol"
     },
     "clock": {
-        "format": "{:%d | %I:%M}",
+        "format": "{:%I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },

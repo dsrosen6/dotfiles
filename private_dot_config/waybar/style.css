@@ -1,5 +1,5 @@
 @import "macchiato.css";
-@define-color bar-color rgba(54, 58, 79, 0.7);
+@define-color bar-color rgba(54, 58, 79, 0.5);
 @define-color pill-color rgba(36, 39, 58, 0.8);
 @define-color dark-text @mantle;
 @define-color left-color @sapphire;
@@ -7,7 +7,7 @@
 @define-color right-color @sapphire;
 @define-color accent-color @peach;
 * {
-    font-family: "Symbols Nerd Font","JetBrains Mono Semibold" ;
+    font-family: "JetBrains Mono Semibold","Symbols Nerd Font";
     font-size: 18px;
     border-radius: 8;
 }

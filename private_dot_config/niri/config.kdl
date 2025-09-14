@@ -63,7 +63,7 @@ layer-rule {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 10
+    gaps 8
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -116,8 +116,8 @@ layout {
     }
 
     struts {
-        left 15
-        right 15
+        left 10
+        right 10
         // top 5
         // bottom 5
     }

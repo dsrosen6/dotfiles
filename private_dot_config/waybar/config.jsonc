@@ -7,15 +7,12 @@
     "margin-right": 0,
     "modules-left": [
         "hyprland/workspaces",
-        "niri/workspaces",
         "custom/spotify"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
         "pulseaudio",
         "battery",
         "network"
