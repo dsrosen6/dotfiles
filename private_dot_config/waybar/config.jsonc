@@ -7,6 +7,7 @@
     "margin-right": 0,
     "modules-left": [
         "hyprland/workspaces",
+        "niri/workspaces",
         "custom/spotify"
     ],
     "modules-center": [
