@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-theme="$HOME/.config/rofi/themes/master.rasi"
+theme="$HOME/.config/rofi/themes/launcher.rasi"
 cmd="rofi -show drun -theme $theme"
 if [[ $XDG_CURRENT_DESKTOP == "GNOME" ]]; then
     cmd="rofi -show drun -theme $theme -normal-window"

@@ -1,0 +1,8 @@
+/*****----- Global Properties -----*****/
+@import                          "themes/colors_macchiato.rasi"
+@import                          "themes/master.rasi"
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 true;
+}
