@@ -6,3 +6,7 @@
 configuration {
     show-icons:                 true;
 }
+
+listview {
+    lines: 5;
+}

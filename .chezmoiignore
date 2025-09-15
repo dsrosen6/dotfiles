@@ -14,8 +14,12 @@ README.md
 .config/fedora-setup/*
 .config/sway/
 .config/sway/*
+.config/swaync/
+.config/swaync/*
 .config/hypr/
 .config/hypr/*
+.config/niri/
+.config/niri/*
 .config/waybar/
 .config/waybar/*
 .config/rofi/

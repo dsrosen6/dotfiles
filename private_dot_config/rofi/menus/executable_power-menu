@@ -3,7 +3,7 @@
 theme_path="$HOME/.config/rofi/themes/powermenu.rasi"
 
 lock_cmd="$HOME/.config/scripts/hyprlock-sleep-timer/lock.sh"
-logout_cmd="hyprctl dispatch exit"
+logout_cmd="niri msg action quit"
 sleep_cmd="systemctl suspend"
 restart_cmd="reboot"
 shutdown_cmd="shutdown now"
