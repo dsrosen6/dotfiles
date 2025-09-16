@@ -37,6 +37,7 @@ window#waybar.empty #window {
 #battery,
 #workspaces,
 #custom-spotify,
+#custom-notifications,
 #window {
 	padding: 3 12px;
     margin: 6 3px;

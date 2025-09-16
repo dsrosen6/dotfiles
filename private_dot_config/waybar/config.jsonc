@@ -15,7 +15,8 @@
     "modules-right": [
         "pulseaudio",
         "battery",
-        "network"
+        "network",
+        "custom/notifications"
     ],
     "include": [
         "~/.config/waybar/modules.json"

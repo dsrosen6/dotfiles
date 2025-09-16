@@ -2,10 +2,6 @@
 
 theme="$HOME/.config/rofi/themes/launcher.rasi"
 cmd="rofi -show drun -theme $theme"
-if [[ $XDG_CURRENT_DESKTOP == "GNOME" ]]; then
-    cmd="rofi -show drun -theme $theme -normal-window"
-fi
-
 if ! pgrep "rofi"; then
     $cmd
 else
