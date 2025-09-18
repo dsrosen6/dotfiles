@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+msg="Confirm: Log Out"
+cmd="niri msg action quit --skip-confirmation"
+
+~/.config/rofi/templates/confirm "$msg" "$cmd"

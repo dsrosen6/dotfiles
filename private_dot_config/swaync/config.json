@@ -70,13 +70,18 @@
                     "tooltip": "Lock"
                 },
                 {
+                    "label": "󰗽",
+                    "command": "sh -c 'swaync-client -t && ~/.config/rofi/prompts/logout'",
+                    "tooltip": "Log Out"
+                },
+                {
                     "label": "⏻",
-                    "command": "shutdown now",
+                    "command": "sh -c 'swaync-client -t && ~/.config/rofi/prompts/shutdown'",
                     "tooltip": "Power Off"
                 },
                 {
                     "label": "󰜉",
-                    "command": "reboot",
+                    "command": "sh -c 'swaync-client -t && ~/.config/rofi/prompts/reboot'",
                     "tooltip": "Reboot"
                 }
             ]

@@ -129,6 +129,7 @@ binds {
     Mod+Q repeat=false { close-window; }
     Mod+O repeat=false { toggle-overview; }
     Mod+Shift+E { quit; }
+    Ctrl+Shift+Y { spawn-sh "swaync-client -R && swaync-client -rs && swaync-client -t"; }
 
     // Device
     Ctrl+Shift+L hotkey-overlay-title="Lock the Screen" { spawn "~/.config/scripts/hyprlock-sleep-timer/lock.sh"; }
