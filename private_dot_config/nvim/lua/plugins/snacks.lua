@@ -16,7 +16,7 @@ return {
     picker = {
       layout = {
         layout = {
-          width = 0.2,
+          width = 0.3,
         },
       },
     },
