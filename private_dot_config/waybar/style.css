@@ -1,8 +1,7 @@
 @import "macchiato.css";
-@define-color bar-color rgba(54, 58, 79, 0.5);
-@define-color pill-color rgba(36, 39, 58, 0.8);
+@define-color light-text @text;
 @define-color dark-text @mantle;
-@define-color left-color @sapphire;
+@define-color accent-text @sapphire;
 @define-color middle-color @sapphire;
 @define-color right-color @sapphire;
 @define-color accent-color @peach;
@@ -21,7 +20,7 @@
 }
 
 window#waybar {
-    background: @bar-color;
+    background: @mantle;
     border-radius: 0;
 }
 
@@ -39,47 +38,27 @@ window#waybar.empty #window {
 #custom-spotify,
 #custom-notifications,
 #window {
-	padding: 3 12px;
+	padding: 3 8px;
     margin: 6 3px;
-    background: @pill-color;
-    color: @right-color;
-    border-color: @right-color;
-    border-width: 2px;
+    color: @light-text;
 }
 
 #workspaces {
     padding: 0 0px;
-    border-color: @left-color;
+    margin-right: 10px;
+}
+
+#workspaces button,
+#workspaces button.active {
+    padding: 0 3px;
 }
 
 #workspaces button {
-    padding: 0 0px;
-    color: @left-color;
+    padding: 0 3px;
+    color: @light-text;
 }
 
 #workspaces button.active {
-    padding: 0 0px;
-    color: @dark-text;
-    border-radius: 8;
-    background: @left-color;
-}
-
-#custom-spotify {
-    color: @left-color;
-    border-color: @left-color;
-}
-
-#clock {
-    color: @middle-color;
-    border-color: @middle-color;
-}
-
-#cpu,
-#memory,
-#pulseaudio,
-#network,
-#battery {
-    color: @right-color;
-    border-color: @right-color;
+    color: @accent-text;
 }
 
