@@ -1,60 +1,60 @@
 @import "macchiato.css";
-@define-color light-text @text;
+@define-color bar-color @mantle;
+@define-color light-text @subtext1;
 @define-color dark-text @mantle;
 @define-color accent-text @sapphire;
-@define-color middle-color @sapphire;
-@define-color right-color @sapphire;
-@define-color accent-color @peach;
+@define-color warning-text @yellow;
+@define-color critical-text @red;
+
 * {
-    font-family: "JetBrains Mono Semibold","Symbols Nerd Font";
+    font-family:"Symbols Nerd Font","JetBrains Mono Semibold";
     font-size: 18px;
-    border-radius: 8;
 }
 
 .modules-right {
-    margin-right: 10px;
+    margin-right: 3px;
 }
 
 .modules-left {
-    margin-left: 10px;
+    margin-left: 1px;
 }
 
 window#waybar {
-    background: @mantle;
-    border-radius: 0;
-}
-
-window#waybar.empty #window {
-    background-color: transparent;
+    background: @bar-color;
 }
 
 #clock,
 #pulseaudio,
-#cpu,
-#memory,
 #network,
 #battery,
 #workspaces,
+#submap,
 #custom-spotify,
-#custom-notifications,
-#window {
-	padding: 3 8px;
-    margin: 6 3px;
+#custom-notifications {
+    padding: 1 0px;
+    margin: 6 9px;
     color: @light-text;
+}
+
+#battery.warning {
+    color: @warning-text;
+}
+
+#battery.critical {
+    color: @critical-text;
 }
 
 #workspaces {
     padding: 0 0px;
-    margin-right: 10px;
+    margin-right: 6px;
 }
 
 #workspaces button,
 #workspaces button.active {
-    padding: 0 3px;
+    padding: 0 1px;
 }
 
 #workspaces button {
-    padding: 0 3px;
     color: @light-text;
 }
 

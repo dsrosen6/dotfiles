@@ -1,7 +1,7 @@
 /* ── 1. Palette & Globals (Using @define-color) ──────────────────── */
 @define-color theme_fg rgba(202, 211, 245, 1.0); /* Primary Text */
 @define-color theme_fg_secondary rgba(184, 192, 224, 0.78); /* Secondary Text */
-@define-color theme_bg rgba(30, 32, 48, 0.8); /* Panel/Background */
+@define-color theme_bg rgba(30, 32, 48, 1.0); /* Panel/Background */
 @define-color popup_bg rgba(30, 32, 48, 0.8); /* Floating Notification Background */
 @define-color module_bg rgba(24, 25, 38, 0.46); /* Default Module Background */
 @define-color module_hover_bg rgba(210, 215, 225, 0.35); /* Module Hover */
@@ -9,7 +9,7 @@
 @define-color button_hover_bg rgba(150, 155, 165, 0.40); /* Button Hover */
 @define-color accent_color rgba(125, 196, 228, 0.8); /* Accent Active */
 @define-color accent_color_hover #198de5; /* Accent Hover */
-@define-color main_border rgba(125, 196, 228, 0.5);
+@define-color main_border rgba(125, 196, 228, 1.0);
 @define-color border_light rgba(255, 255, 255, 0.18);
 @define-color border_medium alpha(@border_light, 0.5); /* Approx rgba(255, 255, 255, 0.09) */
 @define-color icon_primary @theme_fg;
@@ -38,8 +38,7 @@
 /* ── 2. Control Center Container ─────────────────────────────────── */
 .control-center {
   background-color: @theme_bg;
-  border: 3px solid @main_border;
-  border-radius: 16px;
+  border: 2px solid @main_border;
   padding: 28px;
   min-width: 380px;
 }

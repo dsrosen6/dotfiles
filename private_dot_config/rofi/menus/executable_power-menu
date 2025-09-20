@@ -3,14 +3,10 @@
 theme_path="$HOME/.config/rofi/themes/powermenu.rasi"
 
 lock_cmd="$HOME/.config/scripts/hyprlock-sleep-timer/lock.sh"
-logout_cmd="niri msg action quit --skip-confirmation"
+logout_cmd="hyprctl dispatch exit"
 sleep_cmd="systemctl suspend"
 restart_cmd="reboot"
 shutdown_cmd="shutdown now"
-
-if [[ "$XDG_CURRENT_DESKTOP" == "Hyprland" ]]; then
-    logout_cmd="hyprctl dispatch exit"
-fi
 
 if ! pgrep rofi; then
     option=$(printf "Lock\nSleep\nLog Out\nRestart\nShut Down" | rofi -dmenu -i -theme $theme_path -p "Power Menu")
