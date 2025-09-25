@@ -1,8 +1,9 @@
 @import "macchiato.css";
 @define-color bar-color @mantle;
 @define-color light-text @subtext1;
+@define-color muted-text @overlay0;
 @define-color dark-text @mantle;
-@define-color accent-text @sapphire;
+@define-color accent-color @sapphire;
 @define-color warning-text @yellow;
 @define-color critical-text @red;
 
@@ -28,6 +29,7 @@ window#waybar {
 #network,
 #battery,
 #workspaces,
+#mode,
 #submap,
 #custom-spotify,
 #custom-notifications {
@@ -50,7 +52,12 @@ window#waybar {
 }
 
 #workspaces button,
-#workspaces button.active {
+#workspaces button.active,
+#workspaces button.visible,
+#workspaces button.focused,
+#workspaces button.empty,
+#workspaces button.persistent {
+    margin: 0 0px;
     padding: 0 1px;
 }
 
@@ -58,7 +65,20 @@ window#waybar {
     color: @light-text;
 }
 
-#workspaces button.active {
-    color: @accent-text;
+#workspaces button.urgent {
+    color: @warning-text;
 }
 
+#workspaces button.empty {
+    color: @muted-text;
+}
+
+#workspaces button.active, /* hyprland */
+#workspaces button.focused { /* sway */
+    color: @dark-text;
+    background: @accent-color;
+}
+
+#mode {
+    color: @warning-text;
+}

@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
 msg="Confirm: Log Out"
-cmd="niri msg action quit --skip-confirmation"
-
-if [[ "$XDG_CURRENT_DESKTOP" == "Hyprland" ]]; then
-    cmd="hyprctl dispatch exit"
-fi
+cmd="sway exit"
 
 ~/.config/rofi/templates/confirm "$msg" "$cmd"
