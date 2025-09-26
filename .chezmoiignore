@@ -12,10 +12,8 @@ README.md
 .config/keyd/*
 .config/fedora-setup/
 .config/fedora-setup/*
-.config/sway/
-.config/sway/*
-.config/swaync/
-.config/swaync/*
+.config/sway*/
+.config/sway*/*
 .config/hypr/
 .config/hypr/*
 .config/niri/
@@ -25,4 +23,6 @@ README.md
 .config/rofi/
 .config/rofi/*
 .config/scripts/mediaplayer.py
+.config/kanshi/
+.config/kanshi/*
 {{ end }}
