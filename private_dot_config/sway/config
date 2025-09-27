@@ -14,7 +14,7 @@ set $menu ~/.config/rofi/menus/launcher
 set $powermenu ~/.config/rofi/menus/power-menu
 set $browser firefox
 set $files nautilus
-set $wallpaper ~/.config/wallpapers/sunset-mountains-clouds.jpg
+set $wallpaper ~/.config/wallpapers/macchiato_base_solid.png
 
 ###################################################
 #################### HARDWARE #####################
@@ -59,7 +59,7 @@ bindsym $mod+Shift+c reload
 ################## Apps/Utilities #################
 bindsym $mod+Return exec $term
 bindsym $mod+b exec $browser
-bindsym $mod+f exec $files
+bindsym $mod+e exec $files
 bindsym Ctrl+Shift+Space exec 1password --quick-access
 bindsym Ctrl+Space exec $menu
 bindsym Ctrl+Shift+4 exec grim -g "$(slurp -d)" && notify-send "Screenshot taken"
@@ -108,8 +108,8 @@ bindsym $mod+Shift+f fullscreen
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+s move scratchpad
+bindsym $mod+s scratchpad show
 
 mode "RESIZE MODE" {
     bindsym $left resize shrink width 10px

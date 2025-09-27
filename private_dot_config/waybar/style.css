@@ -1,5 +1,5 @@
 @import "macchiato.css";
-@define-color bar-color @mantle;
+@define-color bar-color @crust;
 @define-color light-text @subtext1;
 @define-color muted-text @overlay0;
 @define-color dark-text @mantle;
@@ -58,7 +58,8 @@ window#waybar {
 #workspaces button.empty,
 #workspaces button.persistent {
     margin: 0 0px;
-    padding: 0 1px;
+    padding: 0 0px;
+    border-radius: 5px;
 }
 
 #workspaces button {
