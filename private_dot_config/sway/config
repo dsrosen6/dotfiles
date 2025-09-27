@@ -11,6 +11,7 @@ set $right l
 
 set $term kitty
 set $menu ~/.config/rofi/menus/launcher
+set $clipboard ~/.config/rofi/menus/clipboard
 set $powermenu ~/.config/rofi/menus/power-menu
 set $browser firefox
 set $files nautilus
@@ -38,6 +39,7 @@ input type:touchpad {
 ###################################################
 exec swayosd-server
 exec easyeffects --gapplication-service
+exec wl-paste --watch cliphist store
 exec kanshi
 exec swayidle -w \
     timeout 300 'swaylock -f' \
@@ -59,6 +61,7 @@ bindsym $mod+Shift+c reload
 ################## Apps/Utilities #################
 bindsym $mod+Return exec $term
 bindsym $mod+b exec $browser
+bindsym $mod+c exec $clipboard
 bindsym $mod+e exec $files
 bindsym Ctrl+Shift+Space exec 1password --quick-access
 bindsym Ctrl+Space exec $menu

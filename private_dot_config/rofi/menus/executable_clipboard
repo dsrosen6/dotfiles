@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+theme="$HOME/.config/rofi/themes/clipboard.rasi"
+if ! pgrep "rofi"; then
+    cliphist list | rofi -dmenu -theme $theme -p "Clipboard" | cliphist decode | wl-copy
+else
+    killall rofi
+fi

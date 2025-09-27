@@ -1,13 +1,3 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun";
     show-icons:                 false;
@@ -19,7 +9,6 @@ configuration {
 	window-format:              "{w} · {c} · {t}";
 }
 
-/*****----- Global Properties -----*****/
 @import                          "themes/colors_macchiato.rasi"
 
 * {
@@ -49,7 +38,6 @@ configuration {
     alternate-active-foreground: var(background);
 }
 
-/*****----- Main Window -----*****/
 window {
     /* properties for window widget */
     transparency:                "real";
@@ -71,7 +59,6 @@ window {
     background-color:            @background-colour;
 }
 
-/*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
     spacing:                     0px;
@@ -84,7 +71,6 @@ mainbox {
     children:                    [ "inputbar", "listview" ];
 }
 
-/*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     0px;
@@ -107,6 +93,7 @@ prompt {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
@@ -114,6 +101,7 @@ textbox-prompt-colon {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 entry {
     enabled:                     true;
     padding:                     15px;
@@ -124,7 +112,6 @@ entry {
     placeholder-color:           inherit;
 }
 
-/*****----- Listview -----*****/
 listview {
     enabled:                     true;
     columns:                     1;
@@ -147,6 +134,7 @@ listview {
     text-color:                  @foreground-colour;
     cursor:                      "default";
 }
+
 scrollbar {
     handle-width:                5px ;
     handle-color:                @handle-colour;
@@ -154,7 +142,6 @@ scrollbar {
     background-color:            @alternate-background;
 }
 
-/*****----- Elements -----*****/
 element {
     enabled:                     true;
     spacing:                     10px;
@@ -167,48 +154,59 @@ element {
     text-color:                  @foreground-colour;
     cursor:                      pointer;
 }
+
 element normal.normal {
     background-color:            var(normal-background);
     text-color:                  var(normal-foreground);
 }
+
 element normal.urgent {
     background-color:            var(urgent-background);
     text-color:                  var(urgent-foreground);
 }
+
 element normal.active {
     background-color:            var(active-background);
     text-color:                  var(active-foreground);
 }
+
 element selected.normal {
     background-color:            var(alternate-background);
     text-color:                  var(foreground-colour);
 }
+
 element selected.urgent {
     background-color:            var(selected-urgent-background);
     text-color:                  var(selected-urgent-foreground);
 }
+
 element selected.active {
     background-color:            var(selected-active-background);
     text-color:                  var(selected-active-foreground);
 }
+
 element alternate.normal {
     background-color:            var(alternate-normal-background);
     text-color:                  var(alternate-normal-foreground);
 }
+
 element alternate.urgent {
     background-color:            var(alternate-urgent-background);
     text-color:                  var(alternate-urgent-foreground);
 }
+
 element alternate.active {
     background-color:            var(alternate-active-background);
     text-color:                  var(alternate-active-foreground);
 }
+
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
     size:                        32px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -218,7 +216,6 @@ element-text {
     horizontal-align:            0.0;
 }
 
-/*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
     spacing:                     10px;
@@ -230,6 +227,7 @@ mode-switcher{
     background-color:            transparent;
     text-color:                  @foreground-colour;
 }
+
 button {
     padding:                     10px;
     border:                      0px solid;
@@ -239,12 +237,12 @@ button {
     text-color:                  inherit;
     cursor:                      pointer;
 }
+
 button selected {
     background-color:            var(selected-normal-background);
     text-color:                  var(selected-normal-foreground);
 }
 
-/*****----- Message -----*****/
 message {
     enabled:                     true;
     margin:                      0px;
@@ -255,6 +253,7 @@ message {
     background-color:            transparent;
     text-color:                  @foreground-colour;
 }
+
 textbox {
     padding:                     10px;
     border:                      0px solid;
@@ -269,6 +268,7 @@ textbox {
     blink:                       true;
     markup:                      true;
 }
+
 error-message {
     padding:                     0px;
     border:                      0px solid;
