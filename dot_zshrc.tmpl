@@ -21,9 +21,16 @@ if [ -f ~/.env_vars ]; then
     source ~/.env_vars
 fi
 
-# Aliases
+# Universal Aliases
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
+
+{{- if eq .chezmoi.os "linux" }}
+
+# Linux-Specific Aliases
 alias fupdate="sudo dnf upgrade --refresh && flatpak update"
+alias swaycfg="nvim ~/.config/sway/config"
+alias wbcfg="cd ~/.config/waybar && nvim && cd"
+{{- end }}
 
 # Go Env Vars
 export GOROOT=/usr/local/go
@@ -32,7 +39,9 @@ export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:$GOROOT/bin
 export PATH=$HOME/bin:$PATH
 
+{{- if eq .chezmoi.os "darwin" }}
+
 fpath=(/Users/danny/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
-# End of Docker CLI completions
+{{ end }}
