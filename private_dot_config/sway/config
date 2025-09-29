@@ -58,20 +58,20 @@ bar {
 ################## KEY BINDINGS ###################
 ###################################################
 ##################### System ######################
-bindsym $mod+Shift+p exec $powermenu
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+P exec $powermenu
+bindsym $mod+Shift+C reload
 
 ################## Apps/Utilities #################
 bindsym $mod+Return exec $term
-bindsym $mod+b exec $browser
-bindsym $mod+c exec $clipboard
-bindsym $mod+e exec $files
+bindsym $mod+B exec $browser
+bindsym $mod+C exec $clipboard
+bindsym $mod+E exec $files
 bindsym Ctrl+Shift+Space exec 1password --quick-access
 bindsym Ctrl+Space exec $menu
 bindsym Ctrl+Shift+4 exec grim -g "$(slurp -d)" && notify-send "Screenshot taken"
 
 ############### Tiling / Workspaces ###############
-bindsym $mod+q kill
+bindsym $mod+Q kill
 floating_modifier $mod normal
 
 bindsym $mod+$left focus left
@@ -105,42 +105,37 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-bindsym $mod+t split toggle
-bindsym $mod+d split none
+bindsym $mod+T split toggle
+bindsym $mod+D split none
 
-bindsym $mod+w layout toggle split tabbed stacking
-bindsym $mod+Shift+f fullscreen
+bindsym $mod+W layout toggle split tabbed stacking
+bindsym $mod+Shift+F fullscreen
 
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
-bindsym $mod+a focus parent
-bindsym $mod+Shift+s move scratchpad
-bindsym $mod+s scratchpad show
+bindsym $mod+Shift+Space floating toggle
+bindsym $mod+Space focus mode_toggle
+bindsym $mod+A focus parent
+bindsym $mod+Shift+S move scratchpad
+bindsym $mod+S scratchpad show
 
-mode "RESIZE MODE" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-
-    bindsym Escape mode "default"
-}
+bindsym $mod+Minus resize shrink width 20px
+bindsym $mod+Equal resize grow width 20px
+bindsym $mod+Shift+Minus resize shrink height 20px
+bindsym $mod+Shift+Equal resize grow height 20px
 
 mode "MEDIA CONTROL" {
     bindsym $left exec swayosd-client --brightness lower
     bindsym $down exec swayosd-client --output-volume -5
     bindsym $up exec swayosd-client --output-volume 5
     bindsym $right exec swayosd-client --brightness raise
-    bindsym m exec swayosd-client --output-volume mute-toggle
+    bindsym M exec swayosd-client --output-volume mute-toggle
     bindsym Space exec playerctl play-pause
-    bindsym Shift+n exec playerctl previous
-    bindsym n exec playerctl next
+    bindsym Shift+N exec playerctl previous
+    bindsym N exec playerctl next
 
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+m mode "MEDIA CONTROL"
-bindsym $mod+Shift+semicolon mode "RESIZE MODE"
+bindsym $mod+Shift+M mode "MEDIA CONTROL"
 
 ################## Multimedia Keys ###############
 bindsym --locked XF86AudioMute exec swayosd-client --output-volume mute-toggle
