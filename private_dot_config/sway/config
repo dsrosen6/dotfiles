@@ -20,18 +20,23 @@ set $wallpaper ~/.config/wallpapers/macchiato_base_solid.png
 ###################################################
 #################### HARDWARE #####################
 ###################################################
+# Clamshell Mode
+exec_always ~/.config/sway/clamshell.sh
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable
+
 output * bg $wallpaper fill
 output eDP-1 resolution 1920x1200 scale 1.25
 output DP-1 resolution 3440x1440@174.96Hz
 
 input type:pointer {
-        natural_scroll disabled
-        accel_profile "flat"
-        pointer_accel .7
+    natural_scroll disabled
+    accel_profile "flat"
+    pointer_accel .7
 }
 
 input type:touchpad {
-        natural_scroll enabled
+    natural_scroll enabled
 }
 
 ###################################################
@@ -40,12 +45,8 @@ input type:touchpad {
 exec swayosd-server
 exec easyeffects --gapplication-service
 exec wl-paste --watch cliphist store
-exec kanshi
-exec swayidle -w \
-    timeout 300 'swaylock -f' \
-    timeout 315 'systemctl suspend' \
-    before-sleep 'swaylock -f'
 exec 1password --silent
+exec ~/.config/sway/idle.sh 
 
 bar {
     swaybar_command waybar
@@ -105,7 +106,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+t split toggle
 bindsym $mod+d split none
 
-bindsym $mod+slash layout toggle split tabbed stacking
+bindsym $mod+w layout toggle split tabbed stacking
 bindsym $mod+Shift+f fullscreen
 
 bindsym $mod+Shift+space floating toggle
