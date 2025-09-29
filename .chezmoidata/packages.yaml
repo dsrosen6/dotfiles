@@ -1,0 +1,25 @@
+packages:
+  linux:
+    fedora:
+      coprs:
+      - alternateved/keyd
+      - alternateved/cliphist
+      - dejan/lazygit
+      - markupstart/SwayOSD
+      pkgs:
+      - 1password
+      - sway
+      - SwayNotificationCenter
+      - cliphist
+      - btop
+      - blueman
+      - rofi-wayland
+      - bibata-cursor-themes
+      - waybar
+      - nwg-look
+      - jetbrains-mono-fonts-all
+      - lazygit
+      - swayosd
+      - keyd
+      - zsh
+      - kitty
