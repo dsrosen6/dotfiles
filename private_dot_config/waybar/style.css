@@ -52,14 +52,15 @@ window#waybar {
 }
 
 #workspaces button,
-#workspaces button.active,
 #workspaces button.visible,
 #workspaces button.focused,
+#workspaces button.urgent,
+#workspaces button.persistent,
 #workspaces button.empty,
-#workspaces button.persistent {
+#workspaces button.current_output,
+#workspaces button.active {
     margin: 0 0px;
     padding: 0 0px;
-    border-radius: 5px;
 }
 
 #workspaces button {
@@ -76,8 +77,7 @@ window#waybar {
 
 #workspaces button.active, /* hyprland */
 #workspaces button.focused { /* sway */
-    color: @dark-text;
-    background: @accent-color;
+    color: @accent-color;
 }
 
 #mode {
