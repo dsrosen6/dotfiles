@@ -68,7 +68,7 @@ bindsym $mod+C exec $clipboard
 bindsym $mod+E exec $files
 bindsym Ctrl+Shift+Space exec 1password --quick-access
 bindsym Ctrl+Space exec $menu
-bindsym Ctrl+Shift+4 exec grim -g "$(slurp -d)" && notify-send "Screenshot taken"
+bindsym Ctrl+Shift+4 exec grim -g "$(slurp)" - | swappy -f -
 
 ############### Tiling / Workspaces ###############
 bindsym $mod+Q kill

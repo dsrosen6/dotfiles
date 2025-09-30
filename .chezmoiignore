@@ -22,6 +22,8 @@ README.md
 .config/waybar/*
 .config/rofi/
 .config/rofi/*
+.config/swappy/
+.config/swappy/*
 .config/scripts/mediaplayer.py
 .config/kanshi/
 .config/kanshi/*
