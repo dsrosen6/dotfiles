@@ -63,6 +63,8 @@ switch-events {
 spawn-at-startup "~/.config/scripts/niri-clamshell.sh"
 spawn-at-startup "swayosd-server"
 spawn-sh-at-startup "1password --silent"
+spawn-sh-at-startup "easyeffects --gapplication-service"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
 
 
 //////////////////////////////////////////////////
@@ -88,14 +90,14 @@ layout {
 
     border {
         // off
-        width 3
+        width 2
         active-color "#7fc8ff"
         inactive-color "#505050"
     }
 
     struts {
-        left 10
-        right 10
+        left 7
+        right 7
     }
 }
 
@@ -112,7 +114,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 
@@ -137,6 +139,7 @@ binds {
 
     // Apps / Utilities
     Ctrl+Space hotkey-overlay-title="Open Launcher" { spawn "~/.config/rofi/menus/launcher"; }
+    Mod+C hotkey-overlay-title="Open Clipboard" { spawn "~/.config/rofi/menus/clipboard"; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
     Mod+B hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
     Mod+E hotkey-overlay-title="Open Files" { spawn-sh "nautilus --new-window"; }
@@ -233,7 +236,7 @@ binds {
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
+    Mod+Shift+C { center-column; }
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }

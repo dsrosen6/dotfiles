@@ -26,10 +26,11 @@ alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignor
 
 {{- if eq .chezmoi.os "linux" }}
 
-# Linux-Specific Aliases
+# Linux-Specific
 alias fupdate="sudo dnf upgrade --refresh && flatpak update"
 alias swaycfg="nvim ~/.config/sway/config"
 alias wbcfg="cd ~/.config/waybar && nvim && cd"
+export ELECTRON_OZONE_PLATFORM_HINT=auto
 {{- end }}
 
 # Go Env Vars
