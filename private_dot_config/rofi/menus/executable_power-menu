@@ -8,6 +8,10 @@ sleep_cmd="systemctl suspend"
 restart_cmd="reboot"
 shutdown_cmd="shutdown now"
 
+if [[ "$XDG_CURRENT_DESKTOP" = "niri" ]] || [[ "$XDG_CURRENT_DESKTOP" = "hyprland" ]]; then
+    lock_cmd="hyprlock"
+fi
+
 if ! pgrep rofi; then
     option=$(printf "Lock\nSleep\nLog Out\nRestart\nShut Down" | rofi -dmenu -i -theme $theme_path -p "Power Menu")
 

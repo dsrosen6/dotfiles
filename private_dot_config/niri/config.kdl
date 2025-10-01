@@ -40,7 +40,6 @@ output "DP-1" {
     // uncomment to disable this output
     // off
     mode "3440x1440@174.962"
-    position x=0 y=0
     scale 1.0
 }
 
@@ -49,7 +48,6 @@ output "eDP-1" {
     mode "1920x1200@60.001"
     scale 1.25
     transform "normal"
-    position x=3440 y=480
 }
 
 switch-events {
@@ -114,7 +112,7 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 8
+    geometry-corner-radius 10
     clip-to-geometry true
 }
 
