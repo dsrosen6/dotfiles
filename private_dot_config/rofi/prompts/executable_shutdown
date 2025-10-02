@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-msg="Confirm: Shut Down"
-cmd="shutdown now"
-
-~/.config/rofi/templates/confirm "$msg" "$cmd"

@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-theme="$HOME/.config/rofi/themes/launcher.rasi"
-command="rofi -show drun -theme $theme"
-if ! pgrep "rofi"; then
-    $command
-else
-    killall rofi
-fi
