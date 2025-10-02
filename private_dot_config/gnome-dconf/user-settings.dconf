@@ -504,7 +504,7 @@ window-height=904
 window-width=739
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='mouse'
 window-state=(980, 1381, false)
 
 [org/gnome/desktop/app-folders]
@@ -806,8 +806,8 @@ live-alt-tab=['']
 live-alt-tab-backward=['']
 live-alt-tab-scratch=['']
 live-alt-tab-scratch-backward=['']
-move-down=['<Shift><Super>j']
-move-down-workspace=['']
+move-down=['']
+move-down-workspace=['<Shift><Super>j']
 move-left=['<Shift><Super>h']
 move-monitor-above=['']
 move-monitor-below=['']
@@ -820,8 +820,8 @@ move-space-monitor-above=['']
 move-space-monitor-below=['']
 move-space-monitor-left=['']
 move-space-monitor-right=['']
-move-up=['<Shift><Super>k']
-move-up-workspace=['']
+move-up=['']
+move-up-workspace=['<Shift><Super>k']
 new-window=['']
 previous-workspace=['']
 previous-workspace-backward=['']
@@ -907,7 +907,7 @@ locations=@av []
 [org/gnome/software]
 check-timestamp=int64 1759416807
 first-run=false
-flatpak-purge-timestamp=int64 1758383539
+flatpak-purge-timestamp=int64 1759435256
 install-timestamp=int64 1757783420
 packagekit-historical-updates-timestamp=uint64 1757783420
 update-notification-timestamp=int64 1759416808
