@@ -25,9 +25,11 @@ include current-theme.conf
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
+{{- if eq .chezmoi.os "darwin" }}
 font_size 16.0
-
-#: Font size (in pts).
+{{ else }}
+font_size 14.0
+{{ end -}}
 
 # force_ltr no
 
@@ -1051,7 +1053,9 @@ font_size 16.0
 #: Fade the text in inactive windows by the specified amount (a number
 #: between zero and one, with zero being fully faded).
 
+{{ if eq .chezmoi.os "linux" }}
 hide_window_decorations yes
+{{ end }}
 
 #: Hide the window decorations (title-bar and window borders) with
 #: yes. On macOS, titlebar-only and titlebar-and-corners can be used
