@@ -28,7 +28,7 @@ alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignor
 
 # Linux-Specific
 alias fupdate="sudo dnf upgrade --refresh && flatpak update"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+alias dconfupdate="$HOME/.config/gnome-dconf/update-dconf.sh"
 {{- end }}
 
 # Go Env Vars

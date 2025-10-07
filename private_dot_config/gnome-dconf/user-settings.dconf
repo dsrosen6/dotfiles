@@ -9,11 +9,11 @@ color=(1.0, 1.0, 1.0, 1.0)
 color-axis-labels=(1.0, 1.0, 1.0, 1.0)
 
 [com/github/wwmm/easyeffects/streaminputs]
-input-device='alsa_input.pci-0000_00_1f.3-platform-skl_hda_dsp_generic.HiFi__Mic1__source'
+input-device='alsa_input.usb-Generic_USB_Audio_20210726905926-00.mono-fallback'
 
 [com/github/wwmm/easyeffects/streamoutputs]
 blocklist=@as []
-output-device='alsa_output.pci-0000_00_1f.3-platform-skl_hda_dsp_generic.HiFi__Speaker__sink'
+output-device='alsa_output.usb-Generic_USB_Audio_20210726905926-00.analog-stereo'
 plugins=['gate#0', 'compressor#0', 'multiband_compressor#0', 'equalizer#0', 'convolver#0', 'limiter#0']
 
 [com/github/wwmm/easyeffects/streamoutputs/autogain/0]
@@ -504,8 +504,8 @@ window-height=904
 window-width=739
 
 [org/gnome/control-center]
-last-panel='system'
-window-state=(980, 901, false)
+last-panel='power'
+window-state=(980, 1381, false)
 
 [org/gnome/desktop/app-folders]
 folder-children=['System', 'Utilities', 'YaST', 'Pardus']
@@ -576,6 +576,7 @@ toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
 application-children=['org-gnome-ptyxis', 'org-mozilla-firefox', 'org-gnome-software', 'org-gnome-shell-extensions', 'org-gnome-nautilus', 'ulauncher', 'org-freedesktop-problems-applet', 'com-mattjakeman-extensionmanager', '1password', 'org-gnome-settings', 'gimp', 'gnome-power-panel', 'rofi', 'kitty', 'setroubleshoot', 'com-mitchellh-ghostty', 'jetbrains-goland-dc856d98-2a33-44d1-b42d-2d518dfb488d']
+show-in-lock-screen=true
 
 [org/gnome/desktop/notifications/application/1password]
 application-id='1password.desktop'
@@ -687,7 +688,7 @@ switch-to-workspace-3=['<Super>3']
 switch-to-workspace-4=['<Super>4']
 switch-to-workspace-last=['<Super>End']
 switch-to-workspace-left=['<Super>Page_Up', '<Super><Alt>Left', '<Control><Alt>Left']
-switch-to-workspace-right=['<Super>Page_Down', '<Super><Alt>Right', '<Control><Alt>Right']
+switch-to-workspace-right=@as []
 unmaximize=['<Super>Down', '<Alt>F5']
 
 [org/gnome/desktop/wm/preferences]
@@ -739,7 +740,7 @@ migrated-gtk-settings=true
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
-initial-size=(735, 901)
+initial-size=(735, 1381)
 initial-size-file-chooser=(890, 550)
 maximized=true
 
@@ -751,18 +752,23 @@ last-folder-path='/home/danny/Downloads'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-last-coordinates=(33.137700000000002, -96.856499999999997)
-night-light-schedule-automatic=true
-night-light-schedule-from=15.0
-night-light-schedule-to=3.0
+night-light-last-coordinates=(33.103200000000001, -96.670500000000004)
+night-light-schedule-automatic=false
+night-light-schedule-from=12.0
+night-light-schedule-to=0.0
 night-light-temperature=uint32 5000
 
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/']
 home=['<Super>e']
 rotate-video-lock-static=['<Super>o', 'XF86RotationLockToggle']
-screensaver=['<Super>l']
+screensaver=@as []
 www=['<Super>b']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Control>space'
+command='albert toggle'
+name='Albert'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Super>Return'
@@ -773,6 +779,16 @@ name='ghostty'
 binding='<Shift><Control>space'
 command='1password --quick-access'
 name='1Password Quick Access'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3]
+binding='<Super>c'
+command='albert show "clipboard "'
+name='Albert: Clipboard'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
+binding='<Super>o'
+command='flatpak run md.obsidian.Obsidian '
+name='Obsidian'
 
 [org/gnome/settings-daemon/plugins/power]
 sleep-inactive-ac-type='nothing'
@@ -814,11 +830,11 @@ animation-time=0.14999999999999991
 disable-topbar-styling=false
 horizontal-margin=15
 last-used-display-server='Wayland'
-minimap-scale=0.0
+minimap-scale=0.14999999999999999
 open-window-position=0
 restore-attach-modal-dialogs='true'
 restore-edge-tiling='true'
-restore-keybinds='{}'
+restore-keybinds='{"switch-to-workspace-right":{"bind":"[\\"<Super>Page_Down\\",\\"<Super><Alt>Right\\",\\"<Control><Alt>Right\\"]","schema_id":"org.gnome.desktop.wm.keybindings"},"toggle-quick-settings":{"bind":"[\\"<Super>s\\"]","schema_id":"org.gnome.shell.keybindings"},"toggle-message-tray":{"bind":"[\\"<Super>v\\",\\"<Super>m\\"]","schema_id":"org.gnome.shell.keybindings"},"screensaver":{"bind":"[\\"<Super>l\\"]","schema_id":"org.gnome.settings-daemon.plugins.media-keys"},"rotate-video-lock-static":{"bind":"[\\"<Super>o\\",\\"XF86RotationLockToggle\\"]","schema_id":"org.gnome.settings-daemon.plugins.media-keys"}}'
 restore-workspaces-only-on-primary='true'
 selection-border-radius-bottom=10
 selection-border-radius-top=10
@@ -833,6 +849,8 @@ window-gap=12
 winprops=['{"wm_class":"1Password","scratch_layer":true}']
 
 [org/gnome/shell/extensions/paperwm/keybindings]
+barf-out=['']
+center-horizontally=['<Shift><Super>c']
 close-window=['']
 cycle-height-backwards=['']
 live-alt-tab=['']
@@ -930,20 +948,21 @@ switch-to-application-2=@as []
 switch-to-application-3=@as []
 switch-to-application-4=@as []
 switch-to-application-9=@as []
-toggle-message-tray=['<Super>v', '<Super>m']
-toggle-overview=['<Control>space']
-toggle-quick-settings=['<Super>s']
+toggle-message-tray=@as []
+toggle-quick-settings=@as []
 
 [org/gnome/shell/world-clocks]
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1759510329
+check-timestamp=int64 1759597545
+download-updates=false
+download-updates-notify=false
 first-run=false
-flatpak-purge-timestamp=int64 1759538418
+flatpak-purge-timestamp=int64 1759801750
 install-timestamp=int64 1757783420
 packagekit-historical-updates-timestamp=uint64 1757783420
-update-notification-timestamp=int64 1759510343
+update-notification-timestamp=int64 1759858614
 
 [org/gnome/system/location]
 enabled=true
