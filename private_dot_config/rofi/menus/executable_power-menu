@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+theme_path="$HOME/.config/rofi/themes/powermenu.rasi"
+
+prompts="$HOME/.config/rofi/prompts/"
+lock_cmd="$HOME/.config/scripts/hyprlock-sleep-timer/lock.sh"
+sleep_cmd="systemctl suspend"
+
+if ! pgrep rofi; then
+    option=$(printf "Lock\nSleep\nLog Out\nReboot\nShut Down" | rofi -dmenu -i -theme $theme_path -p "Power Menu")
+
+    case "$option" in
+    "Lock") $lock_cmd ;;
+    "Sleep") $sleep_cmd ;;
+    "Log Out") "$prompts/logout" ;;
+    "Reboot") "$prompts/reboot" ;;
+    "Shut Down") "$prompts/shutdown" ;;
+    *) exit 1 ;;
+    esac
+else
+    pkill rofi
+fi

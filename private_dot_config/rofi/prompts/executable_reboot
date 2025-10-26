@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+msg="Confirm: Reboot"
+cmd="reboot"
+
+~/.config/rofi/templates/confirm "$msg" "$cmd"

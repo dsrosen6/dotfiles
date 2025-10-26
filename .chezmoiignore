@@ -14,4 +14,16 @@ README.md
 .config/dconf/*
 .config/gnome-dconf/
 .config/gnome-dconf/*
+.config/hypr/
+.config/hypr/*
+.config/rofi/
+.config/rofi/*
+.config/scripts/
+.config/scripts/*
+.config/waybar/
+.config/waybar/*
+.config/swaync/
+.config/swaync/*
+.config/kanshi/
+.config/kanshi/*
 {{ end }}
