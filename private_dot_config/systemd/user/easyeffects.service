@@ -1,0 +1,10 @@
+[Unit]
+Description=EasyEffects
+After=pipewire.service pipewire-pulse.service
+
+[Service]
+ExecStart=/usr/bin/easyeffects --gapplication-service
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

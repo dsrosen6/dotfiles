@@ -3,7 +3,7 @@
 theme_path="$HOME/.config/rofi/themes/powermenu.rasi"
 
 prompts="$HOME/.config/rofi/prompts/"
-lock_cmd="$HOME/.config/scripts/hyprlock-sleep-timer/lock.sh"
+lock_cmd="$HOME/.config/hypr/scripts/sleep-timer.sh"
 sleep_cmd="systemctl suspend"
 
 if ! pgrep rofi; then
