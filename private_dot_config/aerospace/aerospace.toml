@@ -28,7 +28,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-cmd-ctrl-e = 'exec-and-forget open "$HOME"'
     alt-cmd-ctrl-b = 'exec-and-forget open -n "$(~/.config/aerospace/default-browser.sh)"'
     alt-cmd-ctrl-m = 'exec-and-forget open "/System/Applications/Messages.app"'
-    alt-cmd-ctrl-v = 'exec-and-forget open -n "/Applications/Visual Studio Code.app"'
+    alt-cmd-ctrl-v = 'layout floating tiling'
     alt-cmd-ctrl-x = 'exec-and-forget open "/Applications/Webex.app"'
     alt-cmd-ctrl-o = 'exec-and-forget open -n "/Applications/Obsidian.app/"'
     alt-cmd-ctrl-slash = 'layout tiles horizontal vertical'
@@ -53,19 +53,22 @@ automatically-unhide-macos-hidden-apps = true
     alt-cmd-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
     alt-cmd-ctrl-tab = 'workspace-back-and-forth'
     alt-cmd-ctrl-shift-semicolon = 'mode service'
+    alt-cmd-ctrl-shift-m = 'mode media'
 
 [mode.service.binding]
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-    backspace = ['close-all-windows-but-current', 'mode main']
     alt-cmd-ctrl-shift-h = ['join-with left', 'mode main']
     alt-cmd-ctrl-shift-j = ['join-with down', 'mode main']
     alt-cmd-ctrl-shift-k = ['join-with up', 'mode main']
     alt-cmd-ctrl-shift-l = ['join-with right', 'mode main']
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
+
+[mode.media.binding]
+    esc = ['mode main']
+    j = 'volume down'
+    k = 'volume up'
+    m = 'volume mute-toggle'
 
 [[on-window-detected]]
     if.app-id = 'com.spotify.client'
