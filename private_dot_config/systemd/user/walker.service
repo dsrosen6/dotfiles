@@ -1,0 +1,10 @@
+
+[Unit]
+Description=Walker
+
+[Service]
+ExecStart=/usr/bin/walker --gapplication-service
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

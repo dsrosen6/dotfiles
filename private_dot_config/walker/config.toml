@@ -1,0 +1,4 @@
+theme = "catppuccin-macchiato"  # theme to use
+
+[keybinds]
+quick_activate = ["ctrl 1", "ctrl 2", "ctrl 3", "ctrl 4", "ctrl 5", "ctrl 6", "ctrl 7"]
