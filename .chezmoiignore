@@ -10,20 +10,16 @@ README.md
 {{ if ne .chezmoi.os "linux" }}
 .config/keyd/
 .config/keyd/*
-.config/dconf/
-.config/dconf/*
-.config/gnome-dconf/
-.config/gnome-dconf/*
 .config/hypr/
 .config/hypr/*
-.config/rofi/
-.config/rofi/*
 .config/scripts/
 .config/scripts/*
 .config/waybar/
 .config/waybar/*
 .config/swaync/
 .config/swaync/*
-.config/kanshi/
-.config/kanshi/*
+.config/systemd/
+.config/systemd/*
+.config/walker/
+.config/walker/*
 {{ end }}
