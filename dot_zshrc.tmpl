@@ -21,7 +21,12 @@ if [ -f ~/.env_vars ]; then
     source ~/.env_vars
 fi
 
-# Universal Aliases
+# Universal Aliases / Env Vars
+# set editor to nvim if present - used for sudoedit
+if command -v nvim >/dev/null 2>&1; then
+    export EDITOR=nvim
+fi
+
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
 
 {{- if eq .chezmoi.os "linux" }}
