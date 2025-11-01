@@ -8,7 +8,8 @@
 @define-color critical-text @red;
 
 * {
-    font-family:"Symbols Nerd Font","JetBrains Mono Semibold";
+    font-family:"JetBrainsMono Nerd Font";
+    font-weight: 600;
     font-size: 18px;
 }
 
@@ -33,7 +34,7 @@ window#waybar {
 #custom-spotify,
 #custom-notifications {
     padding: 1 0px;
-    margin: 6 9px;
+    margin: 6 10px;
     color: @light-text;
 }
 
