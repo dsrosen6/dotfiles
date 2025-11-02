@@ -1,3 +1,7 @@
 # dotfiles
 
-My dotfiles for Fedora and macOS, managed by `chezmoi`. This autocommits and pushes whenever I change my configs; I am not stat padding my commits, I am just a very indecisive person :)
+My dotfiles for Fedora (Hyprland) and macOS, managed by `chezmoi`.
+
+A horrible wasteland of constant, undescriptive commits.
+
+If you are wondering where like 80% of my commit history comes from, you're in the repo.
