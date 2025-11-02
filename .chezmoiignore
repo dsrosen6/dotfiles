@@ -8,6 +8,8 @@ README.md
 .config/karabiner/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+.config/easyeffects/
+.config/easyeffects/*
 .config/keyd/
 .config/keyd/*
 .config/hypr/
@@ -16,6 +18,8 @@ README.md
 .config/scripts/*
 .config/waybar/
 .config/waybar/*
+.config/swaylock/
+.config/swaylock/*
 .config/swaync/
 .config/swaync/*
 .config/systemd/
