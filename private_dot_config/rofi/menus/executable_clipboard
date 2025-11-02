@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+theme_path="$HOME/.config/rofi/themes/clipboard.rasi"
+
+if ! pgrep rofi; then
+    cliphist list | rofi -dmenu -i -theme $theme_path -p "Clipboard | 'cliphist wipe' to clear"
+else
+    pkill rofi
+fi
