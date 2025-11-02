@@ -14,11 +14,11 @@
 }
 
 .modules-right {
-    margin-right: 3px;
+    margin-right: 15px;
 }
 
 .modules-left {
-    margin-left: 1px;
+    margin-left: 15px;
 }
 
 window#waybar {
@@ -29,11 +29,8 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery,
-#workspaces,
 #submap,
-#custom-spotify,
-#custom-notifications {
-    padding: 1 0px;
+#custom-spotify {
     margin: 6 10px;
     color: @light-text;
 }
@@ -48,6 +45,7 @@ window#waybar {
 
 #workspaces {
     padding: 0 0px;
+    margin: 0px;
     margin-right: 6px;
 }
 

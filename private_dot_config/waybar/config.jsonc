@@ -15,8 +15,7 @@
     "modules-right": [
         "pulseaudio",
         "battery",
-        "network",
-        "custom/notifications"
+        "network"
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
