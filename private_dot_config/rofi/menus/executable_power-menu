@@ -3,7 +3,7 @@
 theme_path="$HOME/.config/rofi/themes/powermenu.rasi"
 
 prompts="$HOME/.config/rofi/prompts/"
-lock_cmd="swaylock"
+lock_cmd="loginctl lock-session"
 sleep_cmd="systemctl suspend"
 
 if ! pgrep rofi; then
