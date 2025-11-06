@@ -37,10 +37,13 @@ alias hlconf="cd $HOME/.config/hypr"
 {{- end }}
 
 # Go Env Vars
-export GOROOT=/usr/local/go
+if [ -d /usr/local/go ]; then
+    export GOROOT=/usr/local/go
+    export PATH=$PATH:$GOROOT/bin
+fi
+
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH 
-export PATH=$PATH:$GOROOT/bin
 export PATH=$HOME/bin:$PATH
 
 {{- if eq .chezmoi.os "darwin" }}
