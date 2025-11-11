@@ -14,6 +14,8 @@ return {
       },
     },
     picker = {
+      hidden = true,
+      ignored = true,
       layout = {
         layout = {
           width = 0.2,
