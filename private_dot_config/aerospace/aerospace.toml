@@ -1,3 +1,5 @@
+config-version = 2
+
 after-login-command = []
 after-startup-command = []
 
@@ -9,6 +11,7 @@ default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = true
+persistent-workspaces = [ "1", "2", "3", "4", "5" ]
 
 [key-mapping]
     preset = 'qwerty'
@@ -48,11 +51,21 @@ automatically-unhide-macos-hidden-apps = true
     alt-cmd-ctrl-3 = 'workspace 3'
     alt-cmd-ctrl-4 = 'workspace 4'
     alt-cmd-ctrl-5 = 'workspace 5'
+    alt-cmd-ctrl-6 = 'workspace 6'
+    alt-cmd-ctrl-7 = 'workspace 7'
+    alt-cmd-ctrl-8 = 'workspace 8'
+    alt-cmd-ctrl-9 = 'workspace 9'
+    alt-cmd-ctrl-0 = 'workspace 10'
     alt-cmd-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
     alt-cmd-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
     alt-cmd-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
     alt-cmd-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
     alt-cmd-ctrl-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+    alt-cmd-ctrl-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+    alt-cmd-ctrl-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
+    alt-cmd-ctrl-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
+    alt-cmd-ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
+    alt-cmd-ctrl-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
     alt-cmd-ctrl-tab = 'workspace-back-and-forth'
     alt-cmd-ctrl-shift-semicolon = 'mode service'
     alt-cmd-ctrl-shift-m = 'mode media'
