@@ -28,7 +28,8 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
 
     alt-cmd-ctrl-q = 'close --quit-if-last-window'
     alt-cmd-ctrl-enter = 'exec-and-forget open -n "/Applications/Ghostty.app"'
-    alt-cmd-ctrl-e = 'exec-and-forget open -n "/Applications/Ghostty.app" --args -e yazi'
+    alt-cmd-ctrl-e = 'exec-and-forget open "$HOME"'
+    alt-cmd-ctrl-y = 'exec-and-forget open -n "/Applications/Ghostty.app" --args -e yazi'
     alt-cmd-ctrl-b = 'exec-and-forget open -n "/Applications/Google Chrome.app"'
     alt-cmd-ctrl-m = 'exec-and-forget open "/System/Applications/Messages.app"'
     alt-cmd-ctrl-v = 'layout floating tiling'
