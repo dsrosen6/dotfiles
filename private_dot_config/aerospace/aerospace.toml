@@ -45,8 +45,6 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     alt-cmd-ctrl-shift-j = 'move down'
     alt-cmd-ctrl-shift-k = 'move up'
     alt-cmd-ctrl-shift-l = 'move right'
-    alt-cmd-ctrl-minus = 'resize smart -50'
-    alt-cmd-ctrl-equal = 'resize smart +50'
     alt-cmd-ctrl-1 = 'workspace 1'
     alt-cmd-ctrl-2 = 'workspace 2'
     alt-cmd-ctrl-3 = 'workspace 3'
@@ -68,17 +66,19 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     alt-cmd-ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
     alt-cmd-ctrl-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
     alt-cmd-ctrl-tab = 'workspace-back-and-forth'
-    alt-cmd-ctrl-shift-semicolon = 'mode service'
+    alt-cmd-ctrl-shift-p = 'reload-config'
+    alt-cmd-ctrl-shift-semicolon = 'mode resize'
     alt-cmd-ctrl-shift-m = 'mode media'
 
-[mode.service.binding]
-    esc = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+[mode.resize.binding]
+    esc = [ 'mode main' ]
+    j = 'resize smart -50'
+    k = 'resize smart +50'
     alt-cmd-ctrl-shift-h = ['join-with left', 'mode main']
     alt-cmd-ctrl-shift-j = ['join-with down', 'mode main']
     alt-cmd-ctrl-shift-k = ['join-with up', 'mode main']
     alt-cmd-ctrl-shift-l = ['join-with right', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main'] # reset layout
 
 [mode.media.binding]
     esc = ['mode main']
