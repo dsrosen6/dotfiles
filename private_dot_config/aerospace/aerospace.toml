@@ -32,6 +32,7 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     alt-cmd-ctrl-y = 'exec-and-forget open -n "/Applications/Ghostty.app" --args -e yazi'
     alt-cmd-ctrl-b = 'exec-and-forget open -n "/Applications/Zen.app"'
     alt-cmd-ctrl-f = 'layout floating tiling'
+    alt-cmd-ctrl-shift-f = 'fullscreen'
     alt-cmd-ctrl-x = 'exec-and-forget open "/Applications/Webex.app"'
     alt-cmd-ctrl-o = 'exec-and-forget open -n "/Applications/Microsoft Outlook.app/"'
     alt-cmd-ctrl-w = 'swap --swap-focus --wrap-around dfs-next'
@@ -73,10 +74,12 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     esc = [ 'mode main' ]
     j = 'resize smart -50'
     k = 'resize smart +50'
-    alt-cmd-ctrl-shift-h = ['join-with left', 'mode main']
-    alt-cmd-ctrl-shift-j = ['join-with down', 'mode main']
-    alt-cmd-ctrl-shift-k = ['join-with up', 'mode main']
-    alt-cmd-ctrl-shift-l = ['join-with right', 'mode main']
+    f = 'layout floating tiling'
+    alt-cmd-ctrl-f = 'fullscreen'
+    alt-cmd-ctrl-h = ['join-with left', 'mode main']
+    alt-cmd-ctrl-j = ['join-with down', 'mode main']
+    alt-cmd-ctrl-k = ['join-with up', 'mode main']
+    alt-cmd-ctrl-l = ['join-with right', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
 
 [mode.media.binding]
