@@ -28,15 +28,9 @@ if command -v nvim >/dev/null 2>&1; then
 fi
 
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
-
-{{- if eq .chezmoi.os "linux" }}
-
-# Linux-Specific
-alias fupdate="sudo dnf upgrade --refresh && flatpak update"
-alias hlconf="cd $HOME/.config/hypr"
-alias nixconf="cd /etc/nixos/"
-alias nixbuild="sudo nixos-rebuild switch"
-{{- end }}
+alias lg="lazygit"
+alias n="nvim"
+alias nvnv="cd ~/.config/nvim && nvim"
 
 # Go Env Vars
 if [ -d /usr/local/go ]; then
@@ -48,11 +42,8 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH 
 export PATH=$HOME/bin:$PATH
 
-{{- if eq .chezmoi.os "darwin" }}
-
 fpath=(/Users/danny/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
-{{ end }}
 
 eval "$(zoxide init zsh)"
