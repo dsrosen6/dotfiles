@@ -88,7 +88,3 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     j = 'volume down'
     k = 'volume up'
     m = 'volume mute-toggle'
-
-[[on-window-detected]]
-    if.app-id = 'com.spotify.client'
-    run = 'layout floating'
