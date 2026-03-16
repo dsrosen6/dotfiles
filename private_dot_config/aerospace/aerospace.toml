@@ -32,8 +32,10 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     alt-cmd-ctrl-y = 'exec-and-forget open -n "/Applications/Ghostty.app" --args -e yazi'
     alt-cmd-ctrl-b = 'exec-and-forget open -n "/Applications/Google Chrome.app"'
     alt-cmd-ctrl-n = 'exec-and-forget open -n "/Applications/Notion.app"'
-    alt-cmd-ctrl-f = 'layout floating tiling'
-    alt-cmd-ctrl-shift-f = 'fullscreen'
+    alt-cmd-ctrl-shift-f = 'exec-and-forget sh -c "~/.config/aerospace/scripts/float_ws.sh floating"'
+    alt-cmd-ctrl-shift-t = 'exec-and-forget sh -c "~/.config/aerospace/scripts/float_ws.sh tiling"'
+    alt-cmd-ctrl-t = 'layout floating tiling'
+    alt-cmd-ctrl-f = 'fullscreen'
     alt-cmd-ctrl-x = 'exec-and-forget open "/Applications/Webex.app"'
     alt-cmd-ctrl-o = 'exec-and-forget open -n "/Applications/Microsoft Outlook.app/"'
     alt-cmd-ctrl-w = 'swap --swap-focus --wrap-around dfs-next'
@@ -89,6 +91,24 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     k = 'volume up'
     m = 'volume mute-toggle'
 
+# Workspaces 6-10 are floating
 [[on-window-detected]]
-    if.app-id = 'cc.ffitch.shottr'
+    if.workspace = '6'
     run = 'layout floating'
+
+[[on-window-detected]]
+    if.workspace = '7'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.workspace = '8'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.workspace = '9'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.workspace = '10'
+    run = 'layout floating'
+
