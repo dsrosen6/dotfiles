@@ -9,6 +9,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 accordion-padding = 30
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
+on-focus-changed = ['move-mouse window-lazy-center']
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = true
 persistent-workspaces = [ "1", "2", "3", "4", "5" ]
@@ -59,19 +60,27 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     alt-cmd-ctrl-8 = 'workspace 8'
     alt-cmd-ctrl-9 = 'workspace 9'
     alt-cmd-ctrl-0 = 'workspace 10'
-    alt-cmd-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-    alt-cmd-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-    alt-cmd-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-    alt-cmd-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-    alt-cmd-ctrl-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-    alt-cmd-ctrl-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-    alt-cmd-ctrl-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-    alt-cmd-ctrl-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-    alt-cmd-ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
-    alt-cmd-ctrl-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
+    alt-cmd-ctrl-shift-1 = ['move-node-to-workspace 1 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-2 = ['move-node-to-workspace 2 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-3 = ['move-node-to-workspace 3 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-4 = ['move-node-to-workspace 4 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-5 = ['move-node-to-workspace 5 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-6 = ['move-node-to-workspace 6 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-7 = ['move-node-to-workspace 7 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-8 = ['move-node-to-workspace 8 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-9 = ['move-node-to-workspace 9 --focus-follows-window', 'layout tiling']
+    alt-cmd-ctrl-shift-0 = ['move-node-to-workspace 10 --focus-follows-window', 'layout tiling']
     alt-cmd-ctrl-shift-r = 'reload-config'
     alt-cmd-ctrl-semicolon = 'mode resize'
     alt-cmd-ctrl-m = 'mode media'
+
+    # scratchpad workspace
+    alt-cmd-ctrl-s = 'exec-and-forget sh -c "~/.config/aerospace/scripts/scratchpad.sh"'
+    alt-cmd-ctrl-shift-s = ['move-node-to-workspace S --focus-follows-window', 'layout floating']
+
+[[on-window-detected]]
+    if.workspace = 'S'
+    run = 'layout floating'
 
 [mode.resize.binding]
     esc = [ 'mode main' ]
@@ -90,25 +99,4 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     j = 'volume down'
     k = 'volume up'
     m = 'volume mute-toggle'
-
-# Workspaces 6-10 are floating
-[[on-window-detected]]
-    if.workspace = '6'
-    run = 'layout floating'
-
-[[on-window-detected]]
-    if.workspace = '7'
-    run = 'layout floating'
-
-[[on-window-detected]]
-    if.workspace = '8'
-    run = 'layout floating'
-
-[[on-window-detected]]
-    if.workspace = '9'
-    run = 'layout floating'
-
-[[on-window-detected]]
-    if.workspace = '10'
-    run = 'layout floating'
 
