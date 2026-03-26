@@ -81,6 +81,10 @@ persistent-workspaces = [ "1", "2", "3", "4", "5" ]
     if.workspace = 'S'
     run = 'layout floating'
 
+[[on-window-detected]]
+    if.app-id = 'cc.ffitch.shottr '
+    run = 'layout floating'
+
 [mode.resize.binding]
     esc = [ 'mode main' ]
     j = 'resize smart -50'
