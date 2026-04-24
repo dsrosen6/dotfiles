@@ -1,9 +1,5 @@
 README.md
 {{ if ne .chezmoi.os "darwin" }}
-.config/aerospace/
-.config/aerospace/*
-.config/borders/
-.config/borders/*
 .config/karabiner/
 .config/karabiner/*
 {{ end }}
@@ -12,16 +8,4 @@ README.md
 .config/easyeffects/*
 .config/keyd/
 .config/keyd/*
-.config/hypr/
-.config/hypr/*
-.config/waybar/
-.config/waybar/*
-.config/swaylock/
-.config/swaylock/*
-.config/swaync/
-.config/swaync/*
-.config/systemd/
-.config/systemd/*
-.config/walker/
-.config/walker/*
 {{ end }}
