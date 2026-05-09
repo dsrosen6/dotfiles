@@ -28,9 +28,10 @@ if command -v nvim >/dev/null 2>&1; then
     export EDITOR=nvim
 fi
 
-alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
+alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea\n.claude' >> .gitignore" # Create a .gitignore file with common entries
 alias lg="lazygit"
 alias n="nvim"
+alias nvim-old="NVIM_APPNAME=nvim-old nvim"
 alias t="tmux"
 alias nvnv="cd ~/.config/nvim && nvim"
 
@@ -43,6 +44,7 @@ fi
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH 
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export ZVM_VI_EDITOR=nvim
 
 fpath=(/Users/danny/.docker/completions $fpath)
