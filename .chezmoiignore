@@ -8,4 +8,6 @@ README.md
 .config/easyeffects/*
 .config/keyd/
 .config/keyd/*
+.config/kglobalshortcutsrc
+.config/kwinrc
 {{ end }}
