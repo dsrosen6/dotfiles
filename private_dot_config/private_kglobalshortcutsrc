@@ -291,7 +291,7 @@ cycleNextAction=,,Next History Item
 cyclePrevAction=,,Previous History Item
 edit_clipboard=,,Edit Contents…
 manage activities=none,Meta+Q,Show Activity Switcher
-next activity=Meta+A,none,Walk through activities
+next activity=none,none,Walk through activities
 previous activity=Meta+Shift+A,none,Walk through activities (Reverse)
 repeat_action=,,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
@@ -332,6 +332,8 @@ _launch=Search\tCtrl+Space
 _launch=Meta+Ctrl+Alt+Shift+Space\tMeta+.\tMeta+Shift+E
 
 [services][org.kde.spectacle.desktop]
+CurrentMonitorScreenShot=
+OpenWithoutScreenshot=
 RectangularRegionScreenShot=Meta+Shift+Print\tCtrl+$
 
 [services][systemsettings.desktop]
