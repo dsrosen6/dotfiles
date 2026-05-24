@@ -1,0 +1,24 @@
+debug: true
+settle-window: 2
+suspend-closed: true
+suspend-idle: true
+
+monitors:
+  - name: eDP-1
+    laptop: true
+    width: 1920
+    height: 1200
+    x: 3440
+    y: 480
+    scale: 1.25
+  - name: DP-1
+    width: 3440
+    height: 1440
+    refresh-rate: 174.96
+    x: 0
+    y: 0
+    scale: 1
+
+post-hooks:
+  - command: "pgrep waybar && systemctl --user restart waybar.service"
+    on-status-change: true

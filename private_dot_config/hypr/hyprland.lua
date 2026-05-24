@@ -1,0 +1,7 @@
+require("modules/appearance")
+require("modules/binds")
+require("modules/env")
+require("modules/general")
+require("modules/input")
+require("modules/layout")
+require("modules/monitor")

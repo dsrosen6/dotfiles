@@ -4,10 +4,20 @@ README.md
 .config/karabiner/*
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+.config/cliphist/
+.config/cliphist/*
 .config/easyeffects/
 .config/easyeffects/*
+.config/hypr/
+.config/hypr/*
 .config/keyd/
 .config/keyd/*
 .config/kglobalshortcutsrc
 .config/kwinrc
+.config/rofi/
+.config/rofi/*
+.config/systemd/
+.config/systemd/*
+.config/waybar/
+.config/waybar/*
 {{ end }}

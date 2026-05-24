@@ -1,63 +1,72 @@
-
-@import "macchiato.css";
-@define-color bar-color @mantle;
-@define-color light-text @subtext1;
-@define-color dark-text @mantle;
-@define-color accent-text @sapphire;
-@define-color warning-text @yellow;
-@define-color critical-text @red;
+@import "../../.config/colors/mocha-gtk.css";
+@define-color primary-text @overlay2;
 
 * {
-    font-family:"JetBrainsMono Nerd Font";
+    font-family:"JetBrainsMono Nerd Font Propo";
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.modules-right {
-    margin-right: 15px;
-}
-
-.modules-left {
-    margin-left: 15px;
-}
-
+/* transparent main bar */
 window#waybar {
-    background: @bar-color;
+    background: transparent;
 }
 
-#clock,
-#pulseaudio,
-#network,
-#battery,
+/* left/center modules */
+#workspaces,
 #submap,
-#custom-spotify {
-    margin: 6 10px;
-    color: @light-text;
-}
-
-#battery.warning {
-    color: @warning-text;
-}
-
-#battery.critical {
-    color: @critical-text;
+#mpris,
+#clock {
+    color: @primary-text;
 }
 
 #workspaces {
-    padding: 0 0px;
-    margin: 0px;
-    margin-right: 6px;
-}
-
-#workspaces button,
-#workspaces button.active {
-    padding: 0 1px;
+    margin-right: 4px;
 }
 
 #workspaces button {
-    color: @light-text;
+    padding: 0px 0px;
+    color: @primary-text;
+}
+
+#workspaces button.empty {
+    color: @overlay0;
 }
 
 #workspaces button.active {
-    color: @accent-text;
+    color: @teal;
+}
+
+#workspaces button.urgent {
+    color: @yellow;
+}
+
+#workspaces button:hover {
+    background: none;
+    box-shadow: none;
+    color: @primary-text;
+}
+
+#mpris {
+    margin-left: 10px;
+}
+
+/* right modules */
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#custom-swaync,
+#clock {
+    color: @primary-text;
+    margin-left: 17px;
+}
+
+#battery.warning {
+    color: @yellow;
+}
+
+#battery.critical {
+    color: @red;
 }

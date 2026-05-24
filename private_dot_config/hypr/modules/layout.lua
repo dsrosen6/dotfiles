@@ -1,0 +1,14 @@
+hl.config({
+	dwindle = {
+		-- 0 = follows mouse, 1 = to the left, 2 = to the right
+		force_split = 2,
+	},
+
+	master = {
+		new_status = "master",
+	},
+
+	scrolling = {
+		fullscreen_on_one_column = true,
+	},
+})
