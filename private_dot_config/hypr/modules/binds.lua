@@ -7,20 +7,25 @@ local function super_exec(key, cmd)
 	bind_exec(mainMod, key, cmd)
 end
 
+---@param dsp HL.Dispatcher
+---@param opts HL.BindOptions?
+local function super_bind(key, dsp, opts)
+	hl.bind(mainMod .. " + " .. key, dsp, opts)
+end
+
 local terminal = "uwsm-app -- ghostty"
 local files = "uwsm-app -- ghostty -e yazi"
 local browser = "uwsm-app -- firefox"
 
 local menu = "$HOME/.config/rofi/rofi.sh"
-local screenshot = 'grim -g "$(slurp) - | swappy -f -'
+local screenshot = 'grim -g "$(slurp)" - | swappy -f -'
 
 -- APPS / UTILITIES --
 super_exec("RETURN", terminal)
 super_exec("B", browser)
--- placeholder: special ws terminal
 super_exec("E", files)
 super_exec("SPACE", menu)
--- placeholder: 1password
+super_exec("P", "$HOME/.config/waybar/toggle.sh")
 bind_exec("CTRL", "SHIFT + 4", screenshot)
 
 -- MENUS
@@ -29,14 +34,20 @@ super_exec("SHIFT + P", menu .. " power")
 super_exec("C", menu .. " clipboard")
 
 -- TILING / WORKSPACES --
-hl.bind(mainMod .. " + Q", hl.dsp.window.close())
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + T", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+super_bind("Q", hl.dsp.window.close())
+super_bind("V", hl.dsp.window.float({ action = "toggle" }))
+super_bind("H", hl.dsp.focus({ direction = "left" }))
+super_bind("J", hl.dsp.focus({ direction = "down" }))
+super_bind("K", hl.dsp.focus({ direction = "up" }))
+super_bind("L", hl.dsp.focus({ direction = "right" }))
+super_bind("SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+super_bind("SHIFT + J", hl.dsp.window.move({ direction = "down" }))
+super_bind("SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+super_bind("SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+
+-- DWINDLE LAYOUT --
+super_bind("T", hl.dsp.layout("togglesplit")) -- dwindle only
+super_bind("X", hl.dsp.layout("swapsplit"))
 
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0

@@ -2,9 +2,9 @@
 @define-color primary-text @overlay2;
 
 * {
-    font-family:"JetBrainsMono Nerd Font Propo";
+    font-family:"UbuntuMono Nerd Font Propo";
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* transparent main bar */
