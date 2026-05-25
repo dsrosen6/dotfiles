@@ -22,17 +22,7 @@ local function monitor_found(name, monitors)
 	return false
 end
 
-local function disable_monitor(name)
-	local monitors = hl.get_monitors()
-	if #monitors > 1 and monitor_found(name, monitors) then
-		hl.monitor({
-			output = name,
-			disabled = true,
-		})
-	end
-end
-
-local function handle_lid()
+local function lid_open()
 	local handle = io.popen("cat /proc/acpi/button/lid/LID/state")
 	local lid_state = ""
 	if handle then
@@ -40,17 +30,29 @@ local function handle_lid()
 		handle:close()
 	end
 	if lid_state:find("closed") then
-		disable_monitor("eDP-1")
+		return false
 	else
-		local lm = laptop_monitor
-		hl.monitor({
-			output = lm.output,
-			mode = lm.mode,
-			position = lm.position,
-			scale = lm.scale,
-			disabled = false,
-		})
+		return true
 	end
+end
+
+local function lid_should_disable()
+	local monitors = hl.get_monitors()
+	if not lid_open() and monitor_found("DP-1", monitors) then
+		return true
+	end
+	return false
+end
+
+local function handle_lid()
+	local lm = laptop_monitor
+	hl.monitor({
+		output = laptop_monitor.output,
+		mode = laptop_monitor.mode,
+		position = laptop_monitor.position,
+		scale = laptop_monitor.scale,
+		disabled = lid_should_disable(),
+	})
 end
 
 local function preferred_monitor(primary, fallback)
@@ -72,16 +74,23 @@ local function set_preferred_monitors()
 	end
 end
 
+hl.monitor({
+	output = external_monitor.output,
+	mode = external_monitor.mode,
+	position = external_monitor.position,
+	scale = external_monitor.scale,
+})
+
+hl.monitor({
+	output = laptop_monitor.output,
+	mode = laptop_monitor.mode,
+	position = laptop_monitor.position,
+	scale = laptop_monitor.scale,
+	disabled = lid_should_disable(),
+})
+
 handle_lid()
 hl.bind("switch:Lid Switch", handle_lid)
-
-local em = external_monitor
-hl.monitor({
-	output = em.output,
-	mode = em.mode,
-	position = em.position,
-	scale = em.scale,
-})
 
 hl.workspace_rule({
 	workspace = "1",

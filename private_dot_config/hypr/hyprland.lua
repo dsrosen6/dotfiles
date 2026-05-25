@@ -1,4 +1,5 @@
 require("modules/appearance")
+require("modules/autostart")
 require("modules/binds")
 require("modules/env")
 require("modules/general")

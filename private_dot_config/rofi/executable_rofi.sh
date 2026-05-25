@@ -14,7 +14,7 @@ powermenu() {
     case $choice in
     "Lock") loginctl lock-session ;;
     "Sleep") systemctl suspend ;;
-    "Log Out") hyprctl dispatch exit ;;
+    "Log Out") hyprshutdown ;;
     "Reboot") reboot ;;
     "Shut Down") shutdown now ;;
     esac

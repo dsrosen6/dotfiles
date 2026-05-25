@@ -7,8 +7,6 @@ local function super_exec(key, cmd)
 	bind_exec(mainMod, key, cmd)
 end
 
----@param dsp HL.Dispatcher
----@param opts HL.BindOptions?
 local function super_bind(key, dsp, opts)
 	hl.bind(mainMod .. " + " .. key, dsp, opts)
 end
@@ -66,29 +64,16 @@ hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- MULTIMEDIA KEYS --
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-hl.bind(
-	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-	{ locked = true, repeating = true }
-)
-hl.bind(
-	"XF86AudioMicMute",
-	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
-	{ locked = true, repeating = true }
-)
+local function swayosd_exec(cmd)
+	return hl.dsp.exec_cmd("swayosd-client " .. cmd)
+end
+hl.bind("XF86MonBrightnessUp", swayosd_exec("--brightness +5"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", swayosd_exec("--brightness -5"), { locked = true, repeating = true })
+hl.bind("XF86AudioNext", swayosd_exec("--playerctl next"), { locked = true })
+hl.bind("XF86AudioPause", swayosd_exec("--playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPlay", swayosd_exec("--playerctl play-pause"), { locked = true })
+hl.bind("XF86AudioPrev", swayosd_exec("--playerctl prev"), { locked = true })
+hl.bind("XF86AudioRaiseVolume", swayosd_exec("--output-volume raise"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", swayosd_exec("--output-volume lower"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", swayosd_exec("--output-volume mute-toggle"), { locked = true, repeating = true })
+hl.bind("XF86AudioMicMute", swayosd_exec("--input-volume mute-toggle"), { locked = true, repeating = true })
