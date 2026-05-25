@@ -13,14 +13,16 @@ local files = uwsm("ghostty -e yazi")
 local browser = uwsm("firefox")
 
 local menu = "$HOME/.config/rofi/rofi.sh"
-local screenshot = 'grim -g "$(slurp)" - | swappy -f -'
+local screenshotFull = "grim - | swappy -f -"
+local screenshotRegion = 'grim -g "$(slurp)" - | swappy -f -'
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(browser))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(files))
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + P", hl.dsp.exec_cmd("$HOME/.config/waybar/toggle.sh"))
-hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd(screenshot))
+hl.bind("CTRL + SHIFT + 3", hl.dsp.exec_cmd(screenshotFull))
+hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd(screenshotRegion))
 
 -- MENUS
 hl.bind("CTRL + SPACE", hl.dsp.exec_cmd(menu))
