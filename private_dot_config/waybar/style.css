@@ -2,7 +2,7 @@
 @define-color primary-text @overlay2;
 
 * {
-    font-family:"UbuntuMono Nerd Font Propo";
+    font-family:"JetBrainsMono Nerd Font Propo";
     font-weight: 600;
     font-size: 18px;
 }
@@ -13,9 +13,9 @@ window#waybar {
 }
 
 /* left/center modules */
+#custom-drawer,
 #workspaces,
 #submap,
-#mpris,
 #clock {
     color: @primary-text;
 }
@@ -47,18 +47,13 @@ window#waybar {
     color: @primary-text;
 }
 
-#mpris {
-    margin-left: 10px;
-}
-
 /* right modules */
 #cpu,
 #memory,
 #pulseaudio,
 #network,
 #battery,
-#custom-swaync,
-#clock {
+#custom-swaync {
     color: @primary-text;
     margin-left: 17px;
 }
