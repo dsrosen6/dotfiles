@@ -16,6 +16,8 @@ README.md
 .config/kwinrc
 .config/rofi/
 .config/rofi/*
+.config/swappy/
+.config/swappy/*
 .config/systemd/
 .config/systemd/*
 .config/waybar/

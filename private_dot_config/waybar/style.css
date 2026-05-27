@@ -1,4 +1,4 @@
-@import "../../.config/colors/mocha-gtk.css";
+@import "mocha.css";
 @define-color primary-text @overlay2;
 
 * {
@@ -13,7 +13,6 @@ window#waybar {
 }
 
 /* left/center modules */
-#custom-drawer,
 #workspaces,
 #submap,
 #clock {
@@ -48,6 +47,7 @@ window#waybar {
 }
 
 /* right modules */
+#power-profiles-daemon,
 #cpu,
 #memory,
 #pulseaudio,
@@ -63,5 +63,17 @@ window#waybar {
 }
 
 #battery.critical {
+    color: @red;
+}
+
+#cpu.warning {
+    color: @yellow;
+}
+
+#cpu.critical {
+    color: @red;
+}
+
+#memory.critical {
     color: @red;
 }

@@ -1,5 +1,4 @@
 local mocha = require("hyprland.modules.mocha")
-local swayosd = require("hyprland.modules.swayosd")
 
 hl.config({
 	general = {
@@ -13,7 +12,7 @@ hl.config({
 			inactive_border = mocha.colors.surface0,
 		},
 
-		resize_on_border = false,
+		resize_on_border = true,
 		allow_tearing = false,
 		layout = "dwindle",
 	},
