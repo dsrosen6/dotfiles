@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-DIR_PATH="$1"
-if [ -z "$DIR_PATH" ]; then
-    echo "dir path is empty"
-    exit 1
-fi
-
-tmux new-session -c $1 'nvim'
