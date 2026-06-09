@@ -43,3 +43,4 @@ vim.opt.confirm = true -- confirm for items like quitting with unsaved changes
 
 vim.opt.splitbelow = true -- horizontal splits go below
 vim.opt.splitright = true -- vertical splits go right
+vim.diagnostic.config({ virtual_text = true })

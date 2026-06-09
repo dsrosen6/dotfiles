@@ -10,6 +10,12 @@ return {
 		},
 		lazy = false,
 		opts = {
+			window = {
+				mappings = {
+					["h"] = "close_node",
+					["l"] = "open",
+				},
+			},
 			filesystem = {
 				filtered_items = {
 					hide_dotfiles = false,
