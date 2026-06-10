@@ -18,7 +18,7 @@ hl.device({
 	accel_profile = "adaptive",
 	natural_scroll = true,
 	clickfinger_behavior = true,
-	sensitivity = 0.3,
+	sensitivity = 0.2,
 	scroll_factor = 0.5,
 })
 
