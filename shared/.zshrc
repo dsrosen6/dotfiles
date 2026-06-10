@@ -55,7 +55,8 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export ZVM_VI_EDITOR=nvim
 
-fpath=(/Users/danny/.docker/completions $fpath)
+# Completions
+fpath=(~/.docker/completions ~/.zsh/completions $fpath)
 autoload -Uz compinit
 compinit
 
