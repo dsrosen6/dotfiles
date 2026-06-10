@@ -37,6 +37,12 @@ alias nn="NVIM_APPNAME=nvim-new nvim"
 alias t="tmux"
 alias nvnv="cd ~/.config/nvim && nvim"
 
+# Open tmux and then immediately open nvim within the session. Optional arg for directory.
+tn() {
+  local dir="${1:-.}"
+  tmux new-session -c "$dir" "nvim"
+}
+
 # Go Env Vars
 if [ -d /usr/local/go ]; then
     export GOROOT=/usr/local/go
