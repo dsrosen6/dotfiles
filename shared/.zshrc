@@ -37,10 +37,9 @@ alias nn="NVIM_APPNAME=nvim-new nvim"
 alias t="tmux"
 alias nvnv="cd ~/.config/nvim && nvim"
 
-# Open tmux and then immediately open nvim within the session. Optional arg for directory.
-tn() {
-  local dir="${1:-.}"
-  tmux new-session -c "$dir" "nvim"
+# Tmux sesh connect
+sc() {
+    sesh connect $(sesh list | fzf)
 }
 
 # Go Env Vars
@@ -57,7 +56,23 @@ export ZVM_VI_EDITOR=nvim
 
 # Completions
 fpath=(~/.docker/completions ~/.zsh/completions $fpath)
-autoload -Uz compinit
-compinit
+autoload -U compinit && compinit
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
+
+function sesh-sessions() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+zle     -N             sesh-sessions
+bindkey -M emacs '\es' sesh-sessions
+bindkey -M vicmd '\es' sesh-sessions
+bindkey -M viins '\es' sesh-sessions
