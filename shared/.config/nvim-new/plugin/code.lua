@@ -3,18 +3,16 @@ vim.pack.add({
 	"https://folke/trouble.nvim",
 	"https://folke/todo-comments.nvim",
 	"https://github.com/stevearc/conform.nvim",
-	"https://github.com/mason-org/mason.nvim",
-	"https://github.com/mason-org/mason-lspconfig.nvim",
-	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 	"https://github.com/kdheepak/lazygit.nvim",
 })
 
 require("mini.ai").setup()
 require("mini.pairs").setup()
+require("mini.comment").setup()
 require("todo-comments").setup()
 
-------- Treesitter / LSP -------
+------- Treesitter -------
 require("nvim-treesitter").setup({
 	indent = { enable = true },
 	highlight = { enable = true },
@@ -33,25 +31,6 @@ require("nvim-treesitter").setup({
 		"xml",
 		"yaml",
 	},
-})
-
-require("mason").setup()
-require("mason-lspconfig").setup({
-	ensure_installed = {
-		"gopls",
-		"lua_ls",
-	},
-})
-
-vim.lsp.enable("gopls")
-vim.lsp.enable("lua_ls")
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		local buf = args.buf
-		vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = buf })
-		vim.keymap.set("n", "<leader>cgd", vim.lsp.buf.definition, { desc = "Go to definition", buffer = buf })
-		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = buf })
-	end,
 })
 
 ------- Linting / Formatting -------

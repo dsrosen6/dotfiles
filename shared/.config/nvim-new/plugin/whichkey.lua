@@ -7,6 +7,7 @@ wk.setup({
 
 wk.add({
 	-- categories
+	{ "<leader>b", desc = "buffer" },
 	{ "<leader>c", desc = "code" },
 	{ "<leader>f", group = "file/find" },
 	{ "<leader>g", group = "git" },
