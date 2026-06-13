@@ -1,6 +1,6 @@
 # Oh My Zsh Settings
-export ZSH="$HOME/.oh-my-zsh" # Path to OMZ config
-zstyle ':omz:update' mode disabled  # disable auto updates, chezmoi handles this
+export ZSH="$HOME/.oh-my-zsh"
+zstyle ':omz:update' mode disabled
 ZSH_THEME="robbyrussell"
 
 plugins=(
@@ -28,18 +28,13 @@ if command -v nvim >/dev/null 2>&1; then
     export EDITOR=nvim
 fi
 
-alias sr="source"
-alias cv="cvault"
-alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea\n.claude' >> .gitignore" # Create a .gitignore file with common entries
+alias ev="nvim ~/.env_vars"
 alias lg="lazygit"
 alias n="nvim"
+alias sc="tv sesh"
+alias sr="source"
 alias t="tmux"
-alias nvnv="cd ~/.config/nvim && nvim"
-
-# Tmux sesh connect
-sc() {
-    sesh connect $(sesh list | fzf)
-}
+alias y="yazi"
 
 # Go Env Vars
 if [ -d /usr/local/go ]; then
@@ -58,3 +53,10 @@ fpath=(~/.docker/completions ~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
 eval "$(zoxide init zsh --cmd cd)"
+eval "$(tv init zsh)"
+
+function zvm_after_init() {
+    bindkey '^[v' tv-smart-autocomplete # alt-v
+    bindkey '^R' tv-shell-history # ctrk-r
+    bindkey '^[r' tv-shell-history # alt-r
+}
