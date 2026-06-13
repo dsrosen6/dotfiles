@@ -23,6 +23,12 @@ window_status_format="#{?#{==:#{pane_current_command},ssh},${ssh_window_format},
 maximized_pane_icon='󰊓'
 
 # Apply
+tmux set-option -g pane-border-style "fg=#3b4261"
+tmux set-option -g pane-active-border-style "fg=#4fd6be"
+tmux set-option -g pane-border-lines "single"
+tmux set-option -g message-style "bg=#2f334d,fg=#c8d3f5"
+tmux set-option -g message-command-style "bg=#2f334d,fg=#c8d3f5"
+tmux set-option -g mode-style "bg=#3e68d7,fg=#c8d3f5"
 tmux set-option -g status-position "bottom"
 tmux set-option -g status-justify "absolute-centre"
 tmux set-option -g status-left "$session_component"
