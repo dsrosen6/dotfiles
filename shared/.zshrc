@@ -33,7 +33,6 @@ alias cv="cvault"
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea\n.claude' >> .gitignore" # Create a .gitignore file with common entries
 alias lg="lazygit"
 alias n="nvim"
-alias nn="NVIM_APPNAME=nvim-new nvim"
 alias t="tmux"
 alias nvnv="cd ~/.config/nvim && nvim"
 

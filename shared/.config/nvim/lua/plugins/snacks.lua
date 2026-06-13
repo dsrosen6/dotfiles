@@ -2,26 +2,7 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
-      dashboard = {
-        preset = {
-          header = [[
-███    ██ ██    ██ ██ ███    ███ 
-████   ██ ██    ██ ██ ████  ████ 
-██ ██  ██ ██    ██ ██ ██ ████ ██ 
-██  ██ ██  ██  ██  ██ ██  ██  ██ 
-██   ████   ████   ██ ██      ██ 
-]],
-        },
-      },
-      picker = {
-        hidden = true,
-        ignored = true,
-        layout = {
-          layout = {
-            width = 0.2,
-          },
-        },
-      },
+      dashboard = { enabled = false },
     },
   },
 }
