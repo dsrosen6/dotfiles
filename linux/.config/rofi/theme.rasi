@@ -1,10 +1,10 @@
-@import "mocha"
+@import "tokyonight"
 
 * {
-  primary-color:               @teal;
+  primary-color:               @blue;
   lightfg:                     @primary-color;
-  lightbg:                     @mantle;
-  scrollbar-color:             @teal;
+  lightbg:                     @bgDark;
+  scrollbar-color:             @blue;
   selected-active-foreground:  @background;
   separatorcolor:              @foreground;
   urgent-foreground:           @red;
@@ -19,12 +19,12 @@
   urgent-background:           @background;
   selected-normal-foreground:  @lightbg;
   active-foreground:           @blue;
-  background:                  @base;
+  background:                  @bg;
   selected-active-background:  @blue;
   active-background:           @background;
   selected-normal-background:  @lightfg;
   alternate-normal-background: @lightbg;
-  foreground:                  @text;
+  foreground:                  @fg;
   selected-urgent-foreground:  @background;
   normal-foreground:           @foreground;
   alternate-urgent-foreground: @red;
@@ -90,7 +90,7 @@ window {
     width: 600px;
     padding:          5;
     background-color: @background;
-    border-color: @teal;
+    border-color: @blue;
     border:           2;
 }
 mainbox {

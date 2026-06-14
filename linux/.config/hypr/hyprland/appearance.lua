@@ -1,15 +1,15 @@
-local mocha = require("hyprland.modules.mocha")
+local tokyonight = require("hyprland.modules.tokyonight")
 
 hl.config({
 	general = {
 		gaps_in = 4,
-		gaps_out = 4,
+		gaps_out = 8,
 
 		border_size = 2,
 
 		col = {
-			active_border = mocha.colors.sapphire,
-			inactive_border = mocha.colors.surface0,
+			active_border = tokyonight.blue,
+			inactive_border = tokyonight.bg_highlight,
 		},
 
 		resize_on_border = false,
@@ -18,7 +18,7 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 0,
+		rounding = 8,
 		rounding_power = 2,
 
 		-- Change transparency of focused and unfocused windows

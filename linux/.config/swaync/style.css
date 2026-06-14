@@ -1,18 +1,18 @@
 /* ── 1. Palette ───────────────────────────────────────────────────── */
-@define-color theme_fg          rgba(202, 211, 245, 1.0);
-@define-color theme_fg_secondary rgba(184, 192, 224, 0.70);
-@define-color theme_bg          rgba(30, 32, 48, 0.70);
-@define-color popup_bg          rgba(28, 30, 46, 0.88);
-@define-color module_bg         rgba(22, 24, 38, 0.82);
-@define-color module_hover_bg   rgba(38, 41, 62, 0.95);
-@define-color button_bg         rgba(125, 196, 228, 0.14);
-@define-color button_hover_bg   rgba(125, 196, 228, 0.26);
-@define-color main_border       rgba(125, 196, 228, 1.0);
-@define-color border_subtle     rgba(125, 196, 228, 0.12);
-@define-color border_hover      rgba(125, 196, 228, 0.35);
-@define-color icon_secondary    rgba(184, 192, 224, 0.60);
-@define-color close_button_bg   rgba(184, 192, 224, 0.10);
-@define-color close_button_hover_bg rgba(220, 80, 80, 0.55);
+@define-color theme_fg          rgba(200, 211, 245, 1.0);   /* fg */
+@define-color theme_fg_secondary rgba(130, 139, 184, 0.70); /* fgDark */
+@define-color theme_bg          rgba(34, 36, 54, 0.70);     /* bg */
+@define-color popup_bg          rgba(30, 32, 48, 0.88);     /* bgDark */
+@define-color module_bg         rgba(25, 27, 41, 0.82);     /* bgDark1 */
+@define-color module_hover_bg   rgba(47, 51, 77, 0.95);     /* bgHighlight */
+@define-color button_bg         rgba(130, 170, 255, 0.14);  /* blue */
+@define-color button_hover_bg   rgba(130, 170, 255, 0.26);  /* blue */
+@define-color main_border       rgba(130, 170, 255, 1.0);   /* blue */
+@define-color border_subtle     rgba(130, 170, 255, 0.12);  /* blue */
+@define-color border_hover      rgba(130, 170, 255, 0.35);  /* blue */
+@define-color icon_secondary    rgba(130, 139, 184, 0.60);  /* fgDark */
+@define-color close_button_bg   rgba(130, 139, 184, 0.10);  /* fgDark */
+@define-color close_button_hover_bg rgba(255, 117, 127, 0.55); /* red */
 
 /* ── Base Reset ───────────────────────────────────────────────────── */
 * {

@@ -13,7 +13,7 @@ powermenu() {
     choice=$(echo "$choices" | rofi -dmenu -i)
     case $choice in
     "Lock") loginctl lock-session ;;
-    "Sleep") hyprdocked idle ;;
+    "Sleep") systemctl suspend ;;
     "Log Out") hyprshutdown ;;
     "Reboot") hyprshutdown --post-cmd 'reboot' ;;
     "Shut Down") shutdown now ;;
