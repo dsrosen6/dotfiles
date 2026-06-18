@@ -13,7 +13,7 @@ hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"))
 -- APPS / UTILITIES --
 local terminal = uwsm("ghostty")
 local files = open_in_term("yazi")
-local menu = "$HOME/.config/fuzzel/menus.sh"
+local menu = "python3 $XDG_CONFIG_HOME/fuzzel/menus.py"
 local hyprSettings = menu .. " settings"
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
