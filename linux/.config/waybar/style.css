@@ -19,16 +19,23 @@ window#waybar {
 /* pill surfaces: workspaces, submap, clock, and the right group */
 #workspaces,
 #submap,
-#clock,
-.modules-right {
+#tray,
+#sysmon,
+#hardware,
+#clock {
     background-color: @pill;
     border: 1px solid @pill-border;
     border-radius: 8px;
     color: @primary-text;
 }
 
-#submap,
-#clock {
+/* tray as its own pill, separated from the hardware group */
+#tray {
+    padding: 2px 8px;
+    margin: 0 4px 0 0;
+}
+
+#submap {
     padding: 2px 10px;
     margin: 0 4px;
 }
@@ -72,8 +79,13 @@ window#waybar {
     color: @magenta;
 }
 
-/* right group: one pill, modules sit transparent inside it */
-.modules-right {
+/* right groups: each a pill, modules sit transparent inside */
+#sysmon {
+    padding: 2px 8px;
+    margin: 0 4px 0 0;
+}
+
+#hardware {
     padding: 2px 8px;
     margin: 0;
 }
@@ -87,6 +99,12 @@ window#waybar {
 #custom-swaync {
     padding: 0 10px;
     color: @primary-text;
+}
+
+/* clock: its own pill, centered */
+#clock {
+    padding: 2px 10px;
+    margin: 0 4px;
 }
 
 /* state colors (text only — pill surface stays) */

@@ -3,8 +3,8 @@
     "position": "top",
     "margin-left": 8,
     "margin-right": 8,
-    "margin-top": 6,
-    "margin-bottom": 2,
+    "margin-top": 8,
+    "margin-bottom": 0,
     "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
@@ -14,14 +14,27 @@
         "clock"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
-        "power-profiles-daemon",
-        "pulseaudio",
-        "network",
-        "battery",
-        "custom/swaync"
+        "tray",
+        "group/sysmon",
+        "group/hardware"
     ],
+    "group/sysmon": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "power-profiles-daemon"
+        ]
+    },
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "network",
+            "battery",
+            "custom/swaync"
+        ]
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "show-special": true,
@@ -31,6 +44,9 @@
     },
     "hyprland/submap": {
         "format": "[{}]"
+    },
+    "tray": {
+        "icon-size": 18
     },
     "cpu": {
         "on-click": "ghostty -e btop",

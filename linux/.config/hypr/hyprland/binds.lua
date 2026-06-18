@@ -2,13 +2,9 @@ local swayosd = require("hyprland.modules.swayosd")
 local knobDown = "XF86AudioLowerVolume"
 local knobUp = "XF86AudioRaiseVolume"
 
-local function uwsm(app)
-	return "uwsm-app -- " .. app
-end
+local function uwsm(app) return "uwsm-app -- " .. app end
 
-local function open_in_term(cmd)
-	return "uwsm-app -- ghostty -e " .. cmd
-end
+local function open_in_term(cmd) return "uwsm-app -- ghostty -e " .. cmd end
 
 -- SYSTEM
 hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
@@ -18,7 +14,7 @@ hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"))
 local terminal = uwsm("ghostty")
 local files = open_in_term("yazi")
 local hyprSettings = open_in_term('sh -c "cd ~/.config/hypr && nvim ~/.config/hypr/hyprland/binds.lua"')
-local menu = "$HOME/.config/rofi/rofi.sh"
+local menu = "$HOME/.config/fuzzel/menus.sh"
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(uwsm("firefox")))
@@ -115,21 +111,29 @@ hl.define_submap("Resize", function()
 	hl.bind("SHIFT + H", hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true })
 	hl.bind("SHIFT + L", hl.dsp.window.resize({ x = 100, y = 0, relative = true }), { repeating = true })
 
-	hl.bind("MINUS", function()
-		hl.config({ general = { gaps_in = hl.get_config("general.gaps_in").top - 1 } })
-	end, { repeating = true })
+	hl.bind(
+		"MINUS",
+		function() hl.config({ general = { gaps_in = hl.get_config("general.gaps_in").top - 1 } }) end,
+		{ repeating = true }
+	)
 
-	hl.bind("EQUAL", function()
-		hl.config({ general = { gaps_in = hl.get_config("general.gaps_in").top + 1 } })
-	end, { repeating = true })
+	hl.bind(
+		"EQUAL",
+		function() hl.config({ general = { gaps_in = hl.get_config("general.gaps_in").top + 1 } }) end,
+		{ repeating = true }
+	)
 
-	hl.bind("SHIFT + MINUS", function()
-		hl.config({ general = { gaps_out = hl.get_config("general.gaps_out").top - 1 } })
-	end, { repeating = true })
+	hl.bind(
+		"SHIFT + MINUS",
+		function() hl.config({ general = { gaps_out = hl.get_config("general.gaps_out").top - 1 } }) end,
+		{ repeating = true }
+	)
 
-	hl.bind("SHIFT + EQUAL", function()
-		hl.config({ general = { gaps_out = hl.get_config("general.gaps_out").top + 1 } })
-	end, { repeating = true })
+	hl.bind(
+		"SHIFT + EQUAL",
+		function() hl.config({ general = { gaps_out = hl.get_config("general.gaps_out").top + 1 } }) end,
+		{ repeating = true }
+	)
 
 	hl.bind("ESCAPE", hl.dsp.submap("reset"))
 	hl.bind("SEMICOLON", hl.dsp.submap("reset"))
