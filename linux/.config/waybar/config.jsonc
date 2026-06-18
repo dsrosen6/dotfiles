@@ -1,6 +1,9 @@
 {
     "layer": "top",
     "position": "top",
+    "start_hidden": true,
+    "on-sigusr1": "toggle",
+    "on-sigusr2": "reload",
     "margin-left": 8,
     "margin-right": 8,
     "margin-top": 8,

@@ -13,8 +13,8 @@ hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"))
 -- APPS / UTILITIES --
 local terminal = uwsm("ghostty")
 local files = open_in_term("yazi")
-local hyprSettings = open_in_term('sh -c "cd ~/.config/hypr && nvim ~/.config/hypr/hyprland/binds.lua"')
 local menu = "$HOME/.config/fuzzel/menus.sh"
+local hyprSettings = menu .. " settings"
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(uwsm("firefox")))
@@ -22,7 +22,7 @@ hl.bind("SUPER + E", hl.dsp.exec_cmd(files))
 hl.bind("CTRL + SHIFT + SPACE", hl.dsp.exec_cmd("1password --quick-access")) -- hyprctl reload to fix if not working
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd(hyprSettings))
-hl.bind("SUPER + P", hl.dsp.exec_cmd("$HOME/.config/waybar/toggle.sh"))
+hl.bind("SUPER + P", hl.dsp.exec_cmd("killall -SIGUSR1 waybar"))
 hl.bind("CTRL + SHIFT + 3", hl.dsp.exec_cmd("grim - | swappy -f -")) -- full screenshot
 hl.bind("CTRL + SHIFT + 4", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 
