@@ -8,10 +8,10 @@ visiblePage=pluginsPage
 [StreamOutputs]
 mostUsedPresets=thinkpad,empty
 outputDevice=alsa_output.usb-Generic_USB_Audio_20210726905926-00.analog-stereo
-usedPresets=thinkpad:45,empty:20
+usedPresets=thinkpad:45,empty:22
 visiblePage=pluginsPage
 
 [Window]
 autostartOnLogin=true
-height=1395
-width=1708
+height=1368
+width=1699

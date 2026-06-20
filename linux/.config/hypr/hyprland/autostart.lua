@@ -1,3 +1,1 @@
-hl.on("hyprland.start", function()
-	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24")
-end)
+hl.on("hyprland.start", function() hl.exec_cmd("qs -c 'noctalia-shell'") end)
