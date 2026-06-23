@@ -66,8 +66,8 @@ hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:S" }))
 -- MOUSE BINDS --
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind("SUPER + SLASH", function()
 	local ws = hl.get_active_workspace()
 	if not ws then

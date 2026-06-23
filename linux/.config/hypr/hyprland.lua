@@ -1,3 +1,4 @@
+require("hyprland.animation")
 require("hyprland.appearance")
 require("hyprland.autostart")
 require("hyprland.binds")
