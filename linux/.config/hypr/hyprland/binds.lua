@@ -1,3 +1,8 @@
+local lo = require("hyprland.modules.layout")
+local bind_dwindle = lo.bind_dwindle
+local bind_scrolling = lo.bind_scrolling
+local cycle_layout = lo.cycle_layout
+
 local knobD = "XF86AudioLowerVolume"
 local knobU = "XF86AudioRaiseVolume"
 local function noct(cmd) return "qs -c noctalia-shell ipc call " .. cmd end
@@ -7,6 +12,12 @@ local function open_in_term(cmd) return "uwsm-app -- ghostty -e " .. cmd end
 -- SYSTEM
 hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"))
+
+-- MOUSE BINDS --
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 
 -- APPS / UTILITIES --
 local terminal = uwsm("ghostty")
@@ -50,36 +61,28 @@ hl.bind("SUPER + CONTROL + EQUAL", hl.dsp.window.resize({ x = 0, y = -20, relati
 hl.bind("SUPER + CONTROL + " .. knobU, hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
 hl.bind("SUPER + CONTROL + " .. knobD, hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
 
--- DWINDLE LAYOUT --
-hl.bind("SUPER + T", hl.dsp.layout("togglesplit")) -- dwindle only
-hl.bind("SUPER + X", hl.dsp.layout("swapsplit"))
-
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
 	hl.bind("SUPER + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind("SUPER + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
+-- LAYOUT --
+hl.bind("SUPER + SLASH", cycle_layout())
+bind_dwindle("SUPER + T", hl.dsp.layout("togglesplit")) -- dwindle only
+bind_dwindle("SUPER + X", hl.dsp.layout("swapsplit"))
+
+bind_scrolling("SUPER + SHIFT + MINUS", hl.dsp.layout("colresize -conf"))
+bind_scrolling("SUPER + SHIFT + EQUAL", hl.dsp.layout("colresize +conf"))
+bind_scrolling("SUPER + M", function() -- cycle between center and fit focus method
+	local current_fit = hl.get_config("scrolling.focus_fit_method")
+	local new_fit = current_fit == 0 and 1 or 0
+	hl.config({ scrolling = { focus_fit_method = new_fit } })
+end)
+
 -- SCRATCHPAD --
 hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("S"))
 hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:S" }))
--- MOUSE BINDS --
-hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + SLASH", function()
-	local ws = hl.get_active_workspace()
-	if not ws then
-		return
-	end
-
-	local new_layout = ws.tiled_layout == "dwindle" and "master" or "dwindle"
-	hl.workspace_rule({
-		workspace = tostring(ws.id),
-		layout = new_layout,
-	})
-end)
 
 -- MULTIMEDIA KEYS --
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(noct("brightness increase")), { locked = true, repeating = true })
