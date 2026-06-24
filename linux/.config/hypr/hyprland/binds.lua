@@ -12,6 +12,7 @@ local function open_in_term(cmd) return "uwsm-app -- ghostty -e " .. cmd end
 -- SYSTEM
 hl.bind("SUPER + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind("CTRL + ALT + L", hl.dsp.exec_cmd("loginctl lock-session"))
+hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd("pkill qs || qs -c 'noctalia-shell'"))
 
 -- MOUSE BINDS --
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
