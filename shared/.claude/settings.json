@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
@@ -7,6 +8,8 @@
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true
   },
+  "theme": "dark",
   "editorMode": "vim",
-  "voiceEnabled": false
+  "voiceEnabled": false,
+  "tui": "fullscreen"
 }
