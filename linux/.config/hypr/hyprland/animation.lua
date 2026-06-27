@@ -12,7 +12,7 @@ am.define_beziers({
 })
 
 am.define_springs({
-	{ name = "windowsSpring", duration = 1.0, bounce = 0.25 },
+	{ name = "windowsSpring", duration = 1.1, bounce = 0.21 },
 	{ name = "windowsMoveSpring", duration = 1.2, bounce = 0.22 },
 	{ name = "workspaceSpring", duration = 0.9, bounce = 0.22 },
 })
