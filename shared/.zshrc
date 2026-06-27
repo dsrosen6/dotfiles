@@ -52,7 +52,6 @@ export ZVM_VI_EDITOR=nvim
 fpath=(~/.docker/completions ~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
-eval "$(zoxide init zsh --cmd cd)"
 eval "$(tv init zsh)"
 
 function zvm_after_init() {
@@ -60,3 +59,5 @@ function zvm_after_init() {
     bindkey '^R' tv-shell-history # ctrk-r
     bindkey '^[r' tv-shell-history # alt-r
 }
+
+[[ -o interactive ]] && eval "$(zoxide init zsh --cmd cd)"
