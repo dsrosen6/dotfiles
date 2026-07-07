@@ -20,8 +20,8 @@ am.define_springs({
 am.define_animations({
 	{ leaf = "global", enabled = true, curve = "default", speed = 10 },
 	{ leaf = "windows", enabled = true, curve = "windowsSpring", speed = 1, style = "slide" },
-	{ leaf = "windowsIn", enabled = true, curve = "windowsSpring", speed = 1, style = "popin" },
-	{ leaf = "windowsOut", enabled = true, curve = "windowsSpring", speed = 1, style = "popin" },
+	{ leaf = "windowsIn", enabled = true, curve = "windowsSpring", speed = 1, style = "slide" },
+	{ leaf = "windowsOut", enabled = true, curve = "windowsSpring", speed = 1, style = "slide" },
 	{ leaf = "windowsMove", enabled = true, curve = "windowsMoveSpring", speed = 1, style = "slide" },
 	{ leaf = "layers", enabled = true, curve = "easeOutQuint", speed = 3.81 },
 	{ leaf = "layersIn", enabled = true, curve = "easeOutQuint", speed = 4, style = "fade" },

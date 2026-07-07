@@ -20,14 +20,17 @@ hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 
--- APPS / UTILITIES --
+-- APPS --
 local terminal = uwsm("ghostty")
 local files = open_in_term("yazi")
 
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(uwsm("firefox")))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(files))
+hl.bind("SUPER + N", hl.dsp.exec_cmd(uwsm("notion-app")))
 hl.bind("CTRL + SHIFT + SPACE", hl.dsp.exec_cmd("1password --quick-access")) -- hyprctl reload to fix if not working
+
+-- UTILITIES --
 hl.bind("SUPER + COMMA", hl.dsp.exec_cmd(noct("settings toggle")))
 hl.bind("SUPER + P", hl.dsp.exec_cmd(noct("bar toggle")))
 hl.bind("CTRL + SHIFT + 3", hl.dsp.exec_cmd("grim - | swappy -f -")) -- full screenshot
