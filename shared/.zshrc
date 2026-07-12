@@ -28,13 +28,22 @@ if command -v nvim >/dev/null 2>&1; then
     export EDITOR=nvim
 fi
 
-alias ev="nvim ~/.env_vars"
 alias lg="lazygit"
 alias n="nvim"
 alias sc="tv sesh"
 alias sr="source"
 alias t="tmux"
 alias y="yazi"
+
+prj() {
+    local proj_dir="$HOME/Projects"
+    if [[ -d "$proj_dir" ]]; then
+        cd "$proj_dir"
+    else
+        echo "$proj_dir not found" >&2
+        return 1
+    fi
+}
 
 # Go Env Vars
 if [ -d /usr/local/go ]; then
@@ -61,3 +70,10 @@ function zvm_after_init() {
 }
 
 [[ -o interactive ]] && eval "$(zoxide init zsh --cmd cd)"
+
+# bun completions
+[ -s "/home/danny/.local/share/reflex/bun/_bun" ] && source "/home/danny/.local/share/reflex/bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.local/share/reflex/bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
