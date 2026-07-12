@@ -9,8 +9,8 @@ DIR=$(echo "$input" | jq -r '.workspace.current_dir')
 CTX=$(echo "$input" | jq -r '.context_window.used_percentage // 0' | cut -d. -f1)
 USAGE_5H=$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // 0' | cut -d. -f1)
 USAGE_7D=$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // 0' | cut -d. -f1)
-RESETS_AT_5H=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at')
-RESETS_AT_5H_FMT=$(date -r "$RESETS_AT_5H" "+%I:%M %p" 2>/dev/null)
+RESETS_AT_5H=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
+RESETS_AT_5H_FMT=$([ -n "$RESETS_AT_5H" ] && { date -r "$RESETS_AT_5H" "+%I:%M %p" 2>/dev/null || date -d @"$RESETS_AT_5H" "+%I:%M %p" 2>/dev/null; })
 
 color_pct() {
   local pct=$1
