@@ -31,7 +31,7 @@ am.define_animations({
 	{ leaf = "fadeOut", enabled = true, curve = "almostLinear", speed = 1.46 },
 	{ leaf = "fadeLayersIn", enabled = true, curve = "almostLinear", speed = 1.79 },
 	{ leaf = "fadeLayersOut", enabled = true, curve = "almostLinear", speed = 1.39 },
-	{ leaf = "workspaces", enabled = true, curve = "workspaceSpring", speed = 1, style = "slidevert" },
+	{ leaf = "workspaces", enabled = true, curve = "workspaceSpring", speed = 1, style = "slide" },
 	{ leaf = "specialWorkspace", enabled = true, curve = "workspaceSpring", speed = 1, style = "slidevert" },
 	{ leaf = "border", enabled = true, curve = "easeOutQuint", speed = 5.39 },
 	{ leaf = "zoomFactor", enabled = true, curve = "quick", speed = 7 },
