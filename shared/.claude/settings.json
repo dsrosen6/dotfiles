@@ -2,19 +2,35 @@
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh",
     "padding": 2
   },
   "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "go@go-skills": true,
+    "reflex@reflex-agent-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "go-skills": {
+      "source": {
+        "source": "github",
+        "repo": "spf13/go-skills"
+      }
+    },
+    "reflex-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "reflex-dev/agent-skills"
+      }
+    }
   },
   "effortLevel": "high",
   "tui": "fullscreen",
   "theme": "dark",
   "editorMode": "vim",
   "agentPushNotifEnabled": true,
-  "voiceEnabled": false,
-  "model": "sonnet"
+  "voiceEnabled": false
 }
