@@ -30,6 +30,7 @@ hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + B", hl.dsp.exec_cmd(uwsm(default_browser)))
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd(uwsm(alt_browser)))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(files))
+hl.bind("SUPER + A", hl.dsp.exec_cmd("claude-desktop"))
 hl.bind("SUPER + N", hl.dsp.exec_cmd(uwsm("notion-app")))
 hl.bind("CTRL + SHIFT + SPACE", hl.dsp.exec_cmd("1password --quick-access")) -- hyprctl reload to fix if not working
 
