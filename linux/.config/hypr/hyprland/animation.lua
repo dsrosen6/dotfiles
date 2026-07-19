@@ -1,4 +1,10 @@
 local am = require("hyprland.modules.animation")
+local window_popin_pct = 70
+local ws_slide_pct = 30
+
+local function popin_pct(pct) return "popin " .. pct .. "%" end
+
+local function slidefd_pct(pct) return "slidefade " .. pct .. "%" end
 
 hl.config({ animations = { enabled = true } })
 
@@ -14,10 +20,7 @@ am.define_animations({
 	{ leaf = "global", enabled = true, curve = "default", speed = 10 },
 	{ leaf = "fade", enabled = true, curve = "almostLinear", speed = 3.03 },
 
-	{ leaf = "windows", enabled = true, curve = "easeOutCubic", speed = 3, style = "popin" },
-	{ leaf = "windowsIn", enabled = true, curve = "easeOutCubic", speed = 3, style = "popin" },
-	{ leaf = "windowsOut", enabled = true, curve = "easeInCubic", speed = 3, style = "popin" },
-	{ leaf = "windowsMove", enabled = true, curve = "easeInOutCubic", speed = 3, style = "slide" },
+	{ leaf = "windows", enabled = true, curve = "easeOutCubic", speed = 3, style = popin_pct(window_popin_pct) },
 	{ leaf = "fadeIn", enabled = true, curve = "almostLinear", speed = 2 },
 	{ leaf = "fadeOut", enabled = true, curve = "almostLinear", speed = 2 },
 
@@ -27,7 +30,7 @@ am.define_animations({
 	{ leaf = "fadeLayersIn", enabled = true, curve = "almostLinear", speed = 1.79 },
 	{ leaf = "fadeLayersOut", enabled = true, curve = "almostLinear", speed = 1.39 },
 
-	{ leaf = "workspaces", enabled = true, curve = "easeInOutCubic", speed = 2.5, style = "slidefade" },
+	{ leaf = "workspaces", enabled = true, curve = "easeInOutCubic", speed = 2.5, style = slidefd_pct(ws_slide_pct) },
 	{ leaf = "specialWorkspace", enabled = true, curve = "easeInOutCubic", speed = 2, style = "fade" },
 
 	{ leaf = "border", enabled = true, curve = "easeOutCubic", speed = 5.39 },
