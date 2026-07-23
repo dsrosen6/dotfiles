@@ -511,7 +511,7 @@
         "countdownDuration": 10000,
         "enableCountdown": false,
         "largeButtonsLayout": "single-row",
-        "largeButtonsStyle": true,
+        "largeButtonsStyle": false,
         "position": "center",
         "powerOptions": [
             {
@@ -537,21 +537,21 @@
             },
             {
                 "action": "reboot",
-                "command": "",
+                "command": "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'",
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "3"
             },
             {
                 "action": "logout",
-                "command": "",
+                "command": "hyprshutdown -t 'Logging off...'",
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "4"
             },
             {
                 "action": "shutdown",
-                "command": "",
+                "command": "hyprshutdown -t \"Shutting down...\" --post-cmd 'shutdown -P 0'",
                 "countdownEnabled": true,
                 "enabled": true,
                 "keybind": "5"
