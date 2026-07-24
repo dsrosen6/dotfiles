@@ -1,7 +1,11 @@
 # Oh My Zsh Settings
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode disabled
-ZSH_THEME="robbyrussell"
+if [[ "$(uname -n)" == "danny-devbox" ]]; then
+    ZSH_THEME="clean"
+else
+    ZSH_THEME="robbyrussell"
+fi
 
 plugins=(
     git
@@ -70,10 +74,3 @@ function zvm_after_init() {
 }
 
 [[ -o interactive ]] && eval "$(zoxide init zsh --cmd cd)"
-
-# bun completions
-[ -s "/home/danny/.local/share/reflex/bun/_bun" ] && source "/home/danny/.local/share/reflex/bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.local/share/reflex/bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
