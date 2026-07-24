@@ -1,46 +1,45 @@
 {
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "CLAUDE_CODE_NEW_INIT": "1"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh",
-    "padding": 2
-  },
-  "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true,
-    "go@go-skills": true,
-    "reflex@reflex-agent-skills": true,
-    "frontend-design@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
-  },
-  "extraKnownMarketplaces": {
-    "go-skills": {
-      "source": {
-        "source": "github",
-        "repo": "spf13/go-skills"
-      }
+    "env": {
+        "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+        "CLAUDE_CODE_NEW_INIT": "1"
     },
-    "reflex-agent-skills": {
-      "source": {
-        "source": "github",
-        "repo": "reflex-dev/agent-skills"
-      }
+    "statusLine": {
+        "type": "command",
+        "command": "~/.claude/statusline.sh",
+        "padding": 2
     },
-    "anthropic-agent-skills": {
-      "source": {
-        "source": "github",
-        "repo": "anthropics/skills"
-      }
-    }
-  },
-  "effortLevel": "high",
-  "tui": "fullscreen",
-  "theme": "dark",
-  "editorMode": "vim",
-  "switchModelsOnFlag": false,
-  "agentPushNotifEnabled": true,
-  "voiceEnabled": false
+    "enabledPlugins": {
+        "gopls-lsp@claude-plugins-official": true,
+        "go@go-skills": true,
+        "frontend-design@claude-plugins-official": true,
+        "playwright@claude-plugins-official": true,
+        "skill-creator@claude-plugins-official": true
+    },
+    "extraKnownMarketplaces": {
+        "go-skills": {
+            "source": {
+                "source": "github",
+                "repo": "spf13/go-skills"
+            }
+        },
+        "reflex-agent-skills": {
+            "source": {
+                "source": "github",
+                "repo": "reflex-dev/agent-skills"
+            }
+        },
+        "anthropic-agent-skills": {
+            "source": {
+                "source": "github",
+                "repo": "anthropics/skills"
+            }
+        }
+    },
+    "effortLevel": "high",
+    "tui": "fullscreen",
+    "theme": "dark",
+    "editorMode": "vim",
+    "switchModelsOnFlag": false,
+    "agentPushNotifEnabled": true,
+    "voiceEnabled": false
 }
