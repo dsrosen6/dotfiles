@@ -38,6 +38,7 @@ alias sc="tv sesh"
 alias sr="source"
 alias t="tmux"
 alias y="yazi"
+alias z="zellij"
 
 prj() {
     local proj_dir="$HOME/Projects"
