@@ -56,9 +56,7 @@ if [ -d /usr/local/go ]; then
     export PATH=$PATH:$GOROOT/bin
 fi
 
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH 
-export PATH=$HOME/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.local/bin:$PATH
 export ZVM_VI_EDITOR=nvim
 
@@ -66,8 +64,7 @@ export ZVM_VI_EDITOR=nvim
 fpath=(~/.docker/completions ~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
-eval "$(tv init zsh)"
-
+source "$HOME/.config/television/shell/integration.zsh"
 function zvm_after_init() {
     bindkey '^[v' tv-smart-autocomplete # alt-v
     bindkey '^R' tv-shell-history # ctrk-r
