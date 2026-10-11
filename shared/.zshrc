@@ -34,21 +34,8 @@ fi
 
 alias lg="lazygit"
 alias n="nvim"
-alias sc="tv sesh"
-alias sr="source"
 alias t="tmux"
 alias y="yazi"
-alias z="zellij"
-
-prj() {
-    local proj_dir="$HOME/Projects"
-    if [[ -d "$proj_dir" ]]; then
-        cd "$proj_dir"
-    else
-        echo "$proj_dir not found" >&2
-        return 1
-    fi
-}
 
 # Go Env Vars
 if [ -d /usr/local/go ]; then
@@ -63,12 +50,5 @@ export ZVM_VI_EDITOR=nvim
 # Completions
 fpath=(~/.docker/completions ~/.zsh/completions $fpath)
 autoload -U compinit && compinit
-
-source "$HOME/.config/television/shell/integration.zsh"
-function zvm_after_init() {
-    bindkey '^[v' tv-smart-autocomplete # alt-v
-    bindkey '^R' tv-shell-history # ctrk-r
-    bindkey '^[r' tv-shell-history # alt-r
-}
 
 [[ -o interactive ]] && eval "$(zoxide init zsh --cmd cd)"
