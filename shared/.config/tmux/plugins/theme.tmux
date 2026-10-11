@@ -35,6 +35,7 @@ tmux set-option -g status-left "$session_component"
 tmux set-option -g status-right ""
 tmux set-window-option -g window-status-separator ' • '
 tmux set-option -g window-status-style "bg=${bg},fg=${fg}"
+tmux set-option -g window-status-current-style "bg=${bg},fg=${fg_current}"
 tmux set-option -g window-status-format "$window_status_format"
 tmux set-option -g status-style "bg=${bg},fg=${fg}"
 tmux set-option -g window-status-bell-style "bg=${fg_prefix},fg=${bg},bold"
