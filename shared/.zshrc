@@ -39,11 +39,10 @@ alias y="yazi"
 
 # Go Env Vars
 if [ -d /usr/local/go ]; then
-    export GOROOT=/usr/local/go
-    export PATH=$PATH:$GOROOT/bin
+    export PATH="$PATH:/usr/local/go/bin"
+    export PATH="$PATH:$(go env GOPATH)/bin"
 fi
 
-export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.local/bin:$PATH
 export ZVM_VI_EDITOR=nvim
 
